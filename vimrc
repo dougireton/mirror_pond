@@ -19,7 +19,7 @@ Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on	" Turn on Filetype detection, plugins, and 
 
-runtime macros/matchit.vim	" use the Matchit plugin
+runtime macros/matchit.vim	" use the built-in Matchit plugin
 
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
