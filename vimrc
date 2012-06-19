@@ -20,7 +20,8 @@ Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on	" Turn on Filetype detection, plugins, and 
 
-"runtime macros/matchit.vim	" use the Matchit plugin
+runtime macros/matchit.vim	" use the Matchit plugin
+runtime ftplugin/man.vim
 
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
@@ -116,8 +117,6 @@ set clipboard=unnamed		" Yank to the system clipboard by default
 " ----------------------------------------------------------------------------
 set showmatch			" when inserting a bracket, briefly jump to its 
 				" match
-runtime macros/matchit.vim
-runtime ftplugin/man.vim
 
 set nojoinspaces		" Use only one space after '.' when joining 
 				" lines, instead of two
