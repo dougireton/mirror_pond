@@ -43,7 +43,7 @@ set linebreak			" For lines longer than the window,
 				" wrap intelligently. This doesn't 
 				" insert hard line breaks.
 
-set showbreak=++\ \  		" string to put before wrapped screen 
+set showbreak=++\ \ 		" string to put before wrapped screen
 				" lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
@@ -70,7 +70,7 @@ set switchbuf=usetab		" Jump to the 1st open window which contains
 				" TODO: Add 'split' if you want to split the
 				" current window for a quickfix error window.
 
-set splitright			" a new window is put to the right of the 
+set splitright			" a new window is put to the right of the
 				" current one
 
 " ----------------------------------------------------------------------------
