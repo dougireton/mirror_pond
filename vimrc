@@ -1,8 +1,26 @@
 " ----------------------------------------------------------------------------
-"  important
+"  Vundle setup
 " ----------------------------------------------------------------------------
+filetype off 			" Required for Vundle
+
+set rtp+=~/.vim/bundle/vundle/	" Add vundle to the RuntimePath
+call vundle#rc()
+
+" Let Vundle manage Vundle. Required!
+Bundle 'gmarik/vundle'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-fugitive'
+Bundle 'altercation/vim-colors-solarized'
+
 
 filetype plugin indent on	" Turn on Filetype detection, plugins, and 
+
+"runtime macros/matchit.vim	" use the Matchit plugin
 
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
@@ -151,8 +169,6 @@ set wildignorecase
 " ----------------------------------------------------------------------------
 "  various
 " ----------------------------------------------------------------------------
-
-" colorscheme solarized
 
 " ----------------------------------------------------------------------------
 " Key mappings

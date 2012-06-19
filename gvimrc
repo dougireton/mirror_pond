@@ -1,4 +1,4 @@
-colorscheme desert
+colorscheme solarized
 
 set lines=999 columns=84
 
