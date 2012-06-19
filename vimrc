@@ -65,7 +65,12 @@ set colorcolumn=+2
 set laststatus=2		" Show a status line, even if there's only one 
 				" Vim window
 
-" set switchbuf=		" TODO: look at this option
+set switchbuf=usetab		" Jump to the 1st open window which contains
+				" specified buffer, even if the buffer is in 
+				" another tab.
+				" TODO: Add 'split' if you want to split the
+				" current window for a quickfix error window.
+
 set splitright			" a new window is put to the right of the 
 				" current one
 
