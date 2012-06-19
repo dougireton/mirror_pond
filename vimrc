@@ -179,3 +179,9 @@ set gdefault                    " use the 'g' flag for :substitute
 " exit to Normal mode with 'ii'
 inoremap ii <ESC>
 
+" Make it easier to switch between windows
+" From here: http://vimcasts.org/episodes/working-with-windows/
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
