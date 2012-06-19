@@ -17,11 +17,9 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 
-
 filetype plugin indent on	" Turn on Filetype detection, plugins, and 
 
 runtime macros/matchit.vim	" use the Matchit plugin
-runtime ftplugin/man.vim
 
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
