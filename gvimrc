@@ -9,6 +9,6 @@ set guioptions+=c
 if has("gui_macvim")
   set guifont=Anonymous\ Pro:h14
 elseif has("Win32")
-  "set guifont=
+  set guifont=Consolas:h11
 endif
 
