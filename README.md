@@ -1,4 +1,4 @@
-vimfiles
+Vimfiles
 ========
 
 Vim files for OSX and Windows
@@ -21,7 +21,7 @@ Vim files for OSX and Windows
 3. Setup [Vundle]:
 
      ```
-     $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+     $ git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
      ```
 
 4. Install configured bundles:
