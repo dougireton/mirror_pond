@@ -17,6 +17,9 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 
+" TODO: install Visual Star search plugin
+" https://github.com/nelstrom/vim-visual-star-search
+
 filetype plugin indent on	" Turn on Filetype detection, plugins, and 
 
 runtime macros/matchit.vim	" use the built-in Matchit plugin
@@ -185,3 +188,8 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" repeat the last :substitute command and preserve flags
+" from Practical Vim by Drew Neil: 'Repeat the previous substitute command'
+nnoremap & :&&<Enter>
+xnoremap & :&&<Enter>
