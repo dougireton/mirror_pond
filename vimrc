@@ -16,9 +16,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
-
-" TODO: install Visual Star search plugin
-" https://github.com/nelstrom/vim-visual-star-search
+Bundle 'nelstrom/vim-visual-star-search'
 
 filetype plugin indent on	" Turn on Filetype detection, plugins, and 
 
