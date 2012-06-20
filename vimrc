@@ -192,3 +192,10 @@ map <C-l> <C-w>l
 " from Practical Vim by Drew Neil: 'Repeat the previous substitute command'
 nnoremap & :&&<Enter>
 xnoremap & :&&<Enter>
+
+" ----------------------------------------------------------------------------
+" Autocmds
+" ----------------------------------------------------------------------------
+
+" use the :help command for 'K' in .vim files
+autocmd FileType vim set keywordprg=":help" 
