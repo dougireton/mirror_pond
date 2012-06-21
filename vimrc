@@ -182,6 +182,8 @@ set gdefault                    " use the 'g' flag for :substitute
 " exit to Normal mode with 'ii'
 inoremap ii <ESC>
 
+map Y y$			" Make 'Y' yank from cursor pos to EOL
+
 " Make it easier to switch between windows
 " From here: http://vimcasts.org/episodes/working-with-windows/
 map <C-h> <C-w>h
