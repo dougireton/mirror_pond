@@ -147,6 +147,10 @@ set autoread			" Automatically re-read files changed outside
 "  the swap file
 " ----------------------------------------------------------------------------
 
+if has("win32") || has("win64")
+    set directory=$TEMP
+end
+
 " ----------------------------------------------------------------------------
 "  command line editing
 " ----------------------------------------------------------------------------
@@ -157,6 +161,19 @@ set wildignorecase
 " ----------------------------------------------------------------------------
 "  executing external commands
 " ----------------------------------------------------------------------------
+
+if has("win32") || has("gui_win32")
+    source $VIMRUNTIME/mswin.vim
+
+    " Set PowerShell as the shell for running external ! commands
+    " http://stackoverflow.com/questions/7605917/system-with-powershell-in-vim
+    set shell=PowerShell
+    set shellcmdflag=-ExecutionPolicy\ RemoteSigned\ -Command
+    set shellquote=\"
+    " TODO: shellxquote must be a literal space character.
+    " Fix my trim trailing whitespace command to not run automatically on save
+    set shellxquote= 
+endif
 
 " ----------------------------------------------------------------------------
 "  running make and jumping to errors
