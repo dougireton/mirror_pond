@@ -178,6 +178,7 @@ set gdefault                    " use the 'g' flag for :substitute
 " ----------------------------------------------------------------------------
 " Key mappings
 " ----------------------------------------------------------------------------
+
 " exit to Normal mode with 'ii'
 inoremap ii <ESC>
 
