@@ -20,7 +20,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'ZoomWin'
 
-filetype plugin indent on	" Turn on Filetype detection, plugins, and 
+filetype plugin indent on	" Turn on Filetype detection, plugins, and
+				" indent
 
 runtime macros/matchit.vim	" use the built-in Matchit plugin
 
