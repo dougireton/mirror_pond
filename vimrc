@@ -9,6 +9,7 @@ call vundle#rc()
 " Let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-repeat'
