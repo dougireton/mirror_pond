@@ -165,7 +165,6 @@ set wildignorecase
 " ----------------------------------------------------------------------------
 
 if has("win32") || has("gui_win32")
-  source $VIMRUNTIME/mswin.vim
 
   if executable("PowerShell")
     " Set PowerShell as the shell for running external ! commands
@@ -199,6 +198,13 @@ set gdefault                    " use the 'g' flag for :substitute
 " ----------------------------------------------------------------------------
 " Key mappings
 " ----------------------------------------------------------------------------
+
+if has("win32") || has("gui_win32")
+
+  " Key mappings for Windows
+  source $VIMRUNTIME/mswin.vim
+
+endif
 
 " exit to Normal mode with 'ii'
 inoremap ii <ESC>
