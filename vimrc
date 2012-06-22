@@ -223,6 +223,9 @@ map <C-l> <C-w>l
 nnoremap & :&&<Enter>
 xnoremap & :&&<Enter>
 
+" TODO: Figure out a good mapping for ZoomWin
+" <C-W> o doesn't seem to work properly
+
 " ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
