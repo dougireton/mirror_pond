@@ -22,6 +22,7 @@ Bundle 'ZoomWin'
 
 filetype plugin indent on	" Turn on Filetype detection, plugins, and
 				" indent
+syntax enable			" Turn on syntax highlighting
 
 runtime macros/matchit.vim	" use the built-in Matchit plugin
 
