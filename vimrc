@@ -166,6 +166,7 @@ set wildignorecase
 if has("win32") || has("gui_win32")
   source $VIMRUNTIME/mswin.vim
 
+  if executable("PowerShell")
     " Set PowerShell as the shell for running external ! commands
     " http://stackoverflow.com/questions/7605917/system-with-powershell-in-vim
     set shell=PowerShell
@@ -174,6 +175,7 @@ if has("win32") || has("gui_win32")
     " TODO: shellxquote must be a literal space character.
     " Fix my trim trailing whitespace command to not run automatically on save
     set shellxquote= 
+  endif
 endif
 
 " ----------------------------------------------------------------------------
@@ -217,10 +219,10 @@ xnoremap & :&&<Enter>
 " ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
+if has("autocmd")
+  " use the :help command for 'K' in .vim files
+  autocmd FileType vim set keywordprg=":help"
 
-" use the :help command for 'K' in .vim files
-autocmd FileType vim set keywordprg=":help"
-
-" Visual Studio .proj files are XML
-au BufRead,BufNewFile *.proj set filetype=xml
-
+  " Visual Studio .proj files are XML
+  au BufRead,BufNewFile *.proj set filetype=xml
+endif
