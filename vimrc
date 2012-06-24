@@ -159,6 +159,7 @@ end
 "  command line editing
 " ----------------------------------------------------------------------------
 set wildmode=list:longest
+set wildignore+=*.exe,*.swp	" File tab completion ignores these file patterns
 set wildmenu
 set wildignorecase
 
