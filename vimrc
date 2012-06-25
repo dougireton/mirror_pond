@@ -229,6 +229,11 @@ xnoremap & :&&<Enter>
 " TODO: Figure out a good mapping for ZoomWin
 " <C-W> o doesn't seem to work properly
 
+" paste fully-qualified path of current file into the command window
+" This is useful with ex commands like :write, :edit, etc.
+" From Practical Vim by Drew Neil, pg 94
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
