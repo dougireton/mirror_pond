@@ -19,6 +19,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'ZoomWin'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on	" Turn on Filetype detection, plugins, and
 				" indent
