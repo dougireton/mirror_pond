@@ -18,13 +18,18 @@ Vim files for OSX and Windows
     $ ln -s ~/.vim/gvimrc ~/.gvimrc
     ````
 
-3. Setup [Vundle]:
+3. Make the .vim/bundle directory:
+    ````
+    $ mkdir ~/.vim/bundle
+    ````
+
+4. Setup [Vundle]:
 
      ```
      $ git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
      ```
 
-4. Install configured bundles:
+5. Install configured bundles:
 
      Launch `vim`, run `:BundleInstall` 
      (or `vim +BundleInstall +qall` for CLI lovers)
