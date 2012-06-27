@@ -4,7 +4,7 @@ Vimfiles
 Vim files for OSX and Windows
 
 
-## Quick start for Mac OS X
+## First time install for Mac OS X
 1. Clone this repository:
 
     ```
