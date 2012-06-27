@@ -8,19 +8,32 @@ call vundle#rc()
 
 " Let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
+
+" Language-specific syntax files
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-git'
+Bundle 'elzr/vim-json'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-git'
+
+" Syntax check on buffer save
+Bundle 'scrooloose/syntastic'
+
+" Git plugin
+Bundle 'tpope/vim-fugitive'
+
+" Various editing plugins
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'ZoomWin'
+
+" File managers/explorers
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+
+" Colorschemes
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on	" Turn on Filetype detection, plugins, and
 				" indent
