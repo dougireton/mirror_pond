@@ -91,8 +91,9 @@ set switchbuf=usetab		" Jump to the 1st open window which contains
                                 " TODO: Add 'split' if you want to split the
                                 " current window for a quickfix error window.
 
-" set splitright			" a new window is put to the right of the
-" current one
+set splitright			" Create new vertically split windows to the
+				" right of the current window instead of to the
+				" left
 
 " ----------------------------------------------------------------------------
 "  multiple tab pages
