@@ -56,11 +56,11 @@ set smartcase			" override 'ignorecase' when pattern
 " ----------------------------------------------------------------------------
 "  displaying text
 " ----------------------------------------------------------------------------
-set scrolloff=3			" number of screen lines to show around 
+set scrolloff=3			" number of screen lines to show around
                                 " the cursor
 
 set linebreak			" For lines longer than the window,
-                                " wrap intelligently. This doesn't 
+                                " wrap intelligently. This doesn't
                                 " insert hard line breaks.
 
 set showbreak=++\ \ 		" string to put before wrapped screen
@@ -82,11 +82,11 @@ set colorcolumn=+2		" display a line in column 80 (`textwidth` + 2)
 " ----------------------------------------------------------------------------
 "  multiple windows
 " ----------------------------------------------------------------------------
-set laststatus=2		" Show a status line, even if there's only one 
+set laststatus=2		" Show a status line, even if there's only one
                                 " Vim window
 
 set switchbuf=usetab		" Jump to the 1st open window which contains
-                                " specified buffer, even if the buffer is in 
+                                " specified buffer, even if the buffer is in
                                 " another tab.
                                 " TODO: Add 'split' if you want to split the
                                 " current window for a quickfix error window.
@@ -120,7 +120,7 @@ set ttyfast			" this is the 21st century, people
 "  messages and info
 " ----------------------------------------------------------------------------
 
-set showcmd			" In the status bar, show incomplete commands 
+set showcmd			" In the status bar, show incomplete commands
                                 " as they are typed
 
 set ruler			" Always display the current cursor position in
@@ -227,7 +227,10 @@ endif
 " exit to Normal mode with 'ii'
 inoremap ii <ESC>
 
-map Y y$			" Make 'Y' yank from cursor pos to EOL
+map Y y$			" Make 'Y' yank from cursor pos to EOL. This
+				" makes 'Y' consistent with 'D' which deletes
+				" from cursor pos to EOL.
+
 
 " Make it easier to switch between windows
 " From here: http://vimcasts.org/episodes/working-with-windows/
@@ -258,4 +261,5 @@ if has("autocmd")
 
   " Visual Studio .proj files are XML
   au BufRead,BufNewFile *.proj set filetype=xml
+
 endif
