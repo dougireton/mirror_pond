@@ -95,6 +95,23 @@ set splitright			" Create new vertically split windows to the
 				" right of the current window instead of to the
 				" left
 
+set statusline=
+set statusline+=b%-1.3n\ >
+set statusline+=\ %{fugitive#statusline()}:
+set statusline+=\ %F
+set statusline+=\ %M
+set statusline+=%R
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%=
+set statusline+=\ %Y
+set statusline+=\ <\ %{&fenc}
+set statusline+=\ <\ %{&ff}
+set statusline+=\ <\ %p%%
+set statusline+=\ %l:
+set statusline+=%2.3c   "cursor line/total lines
+
 " ----------------------------------------------------------------------------
 "  multiple tab pages
 " ----------------------------------------------------------------------------
