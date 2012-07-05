@@ -14,6 +14,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'elzr/vim-json'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-git'
+Bundle 'dougireton/vim-ps1'
 
 " Syntax check on buffer save
 Bundle 'scrooloose/syntastic'
