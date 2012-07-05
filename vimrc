@@ -110,7 +110,7 @@ set statusline+=\ <\ %{&fenc}
 set statusline+=\ <\ %{&ff}
 set statusline+=\ <\ %p%%
 set statusline+=\ %l:
-set statusline+=%2.3c   "cursor line/total lines
+set statusline+=%02.3c   "cursor line/total lines
 
 " ----------------------------------------------------------------------------
 "  multiple tab pages
