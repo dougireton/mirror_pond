@@ -89,6 +89,9 @@ set colorcolumn=+2		" display a line in column 80 (`textwidth` + 2)
 set laststatus=2		" Show a status line, even if there's only one
                                 " Vim window
 
+set hidden			" allow switching away from current buffer w/o
+				" writing
+
 set switchbuf=usetab		" Jump to the 1st open window which contains
                                 " specified buffer, even if the buffer is in
                                 " another tab.
