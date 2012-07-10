@@ -19,3 +19,8 @@ endif
 " <Space> and <S-Space> because curses sees them the same
 nnoremap <Space> <PageDown>
 nnoremap <S-Space> <PageUp>
+
+if has("autocmd")
+  " Automatically resize viewport splits when resizing MacVim window
+  autocmd VimResized * wincmd =
+endif
