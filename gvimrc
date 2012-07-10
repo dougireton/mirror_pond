@@ -3,11 +3,10 @@ colorscheme solarized
 " maximize screen height. Set screen width to 84.
 set lines=999 columns=84
 
-" Remove toolbar (T), tear-off menus (t) and use console prompts instead of
-" modal dialogs
-set guioptions-=T
-set guioptions-=t
-set guioptions+=c
+set guioptions-=T		" Remove toolbar
+set guioptions-=t		" Remove tear-off menus
+set guioptions+=c		" Use :ex command-mode prompts instead of modal
+				" dialogs
 
 if has("gui_macvim")
   set guifont=Anonymous\ Pro:h14
