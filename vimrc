@@ -201,7 +201,10 @@ end
 set wildmode=list:longest
 set wildignore+=*.exe,*.swp,.DS_Store	" File tab completion ignores these file patterns
 set wildmenu
-set wildignorecase
+
+if exists('&wildignorecase')
+  set wildignorecase
+endif
 
 " ----------------------------------------------------------------------------
 "  executing external commands
