@@ -32,6 +32,11 @@ map <C-l> <C-w>l
 nnoremap & :&&<Enter>
 xnoremap & :&&<Enter>
 
+" swap mark motion commands to jump to mark's line and col with right pinky
+" see http://items.sjbach.com/319/configuring-vim-right
+nnoremap ' `
+nnoremap ` '
+
 " TODO: Figure out a good mapping for ZoomWin
 " <C-W> o doesn't seem to work properly
 
