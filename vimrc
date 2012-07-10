@@ -202,6 +202,7 @@ set wildmode=list:longest
 set wildignore+=*.exe,*.swp,.DS_Store	" File tab completion ignores these file patterns
 set wildmenu
 
+" Add guard around 'wildignorecase' to prevent terminal vim error
 if exists('&wildignorecase')
   set wildignorecase
 endif
