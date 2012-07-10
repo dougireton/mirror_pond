@@ -33,6 +33,9 @@ Bundle 'ZoomWin'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 
+" PowerLine for an awesome status line
+Bundle "Lokaltog/vim-powerline"
+
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 
