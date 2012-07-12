@@ -248,8 +248,6 @@ set gdefault                    " For :substitute, use the /g flag by default
 " Autocmds
 " ----------------------------------------------------------------------------
 if has("autocmd")
-  " use the :help command for 'K' in .vim files
-  autocmd FileType vim set keywordprg=":help"
 
   " Visual Studio .proj files are XML
   au BufRead,BufNewFile *.proj set filetype=xml
