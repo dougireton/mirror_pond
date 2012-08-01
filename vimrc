@@ -193,6 +193,9 @@ set autoread			" Automatically re-read files changed outside
 
 if has("win32") || has("win64")
   set directory=$TEMP
+else
+  " Vim will try this ordered list of directories for .swp files
+  set directory=~/tmp,.,/var/tmp,/tmp
 end
 
 " ----------------------------------------------------------------------------
