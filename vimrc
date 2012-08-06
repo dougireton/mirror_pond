@@ -16,6 +16,9 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-git'
 Bundle 'dougireton/vim-ps1'
 
+" Comment plugin
+Bundle 'tpope/vim-commentary'
+
 " Syntax check on buffer save
 Bundle 'scrooloose/syntastic'
 
