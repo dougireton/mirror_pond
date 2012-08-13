@@ -31,6 +31,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'ZoomWin'
+Bundle 'taglist.vim'
 
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
