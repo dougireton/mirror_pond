@@ -8,7 +8,7 @@ Vim files for OSX and Windows
 1. Clone this repository:
 
     ```
-    $ git clone git://github.com/dougireton/vimfiles.git ~/.vim
+    $ git clone https://github.com/dougireton/vimfiles.git ~/.vim
     ````
 
 2. Create symlinks to .vimrc and .gvimrc:
@@ -26,10 +26,10 @@ Vim files for OSX and Windows
 4. Setup [Vundle]:
 
      ```
-     $ git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
      ```
 
 5. Install configured bundles:
 
-     Launch `vim`, run `:BundleInstall` 
-     (or `vim +BundleInstall +qall` for CLI lovers)
+    Launch `vim`, run `:BundleInstall` 
+    (or `vim +BundleInstall +qall` for CLI lovers)
