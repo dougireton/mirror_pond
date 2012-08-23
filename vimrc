@@ -255,9 +255,3 @@ set gdefault                    " For :substitute, use the /g flag by default
 " ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
-if has("autocmd")
-
-  " Visual Studio .proj files are XML
-  au BufRead,BufNewFile *.proj set filetype=xml
-
-endif
