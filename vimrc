@@ -33,6 +33,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'ZoomWin'
 Bundle 'taglist.vim'
+Bundle 'ervandew/supertab'
 
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
