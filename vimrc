@@ -34,6 +34,7 @@ Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'ZoomWin'
 Bundle 'taglist.vim'
 Bundle 'ervandew/supertab'
+Bundle 'Align'
 
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
