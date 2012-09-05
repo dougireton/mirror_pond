@@ -37,7 +37,6 @@ Bundle 'ervandew/supertab'
 
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
 
 " PowerLine for an awesome status line
 Bundle "Lokaltog/vim-powerline"
