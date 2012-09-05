@@ -5,6 +5,10 @@ setlocal tabstop=2 shiftwidth=2 softtabstop=2
 " highlight ruby whitespace errors
 let ruby_space_errors = 1
 
+" set the 'foldmethod' option to 'syntax' and allow folding of
+" classes, modules, methods, code blocks, heredocs and comments.
+let ruby_fold = 1
+
 " Activate Ruby.vim's tooltips for Ruby keywords
 setlocal ballooneval
 
