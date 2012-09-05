@@ -178,7 +178,7 @@ set nojoinspaces		" Use only one space after '.' when joining
 " ----------------------------------------------------------------------------
 "  folding
 " ----------------------------------------------------------------------------
-set foldlevelstart=4 	  " For newly opened files, start with all folds fewer 
+set foldlevelstart=4 	  " For newly opened files, start with all folds fewer
 			  " than 4 levels deep open
 
 set foldcolumn=3 	  " Set the foldcolumn width
