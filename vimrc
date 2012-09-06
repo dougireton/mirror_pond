@@ -32,11 +32,11 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'ZoomWin'
-Bundle 'taglist.vim'
 Bundle 'ervandew/supertab'
 
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
 
 " PowerLine for an awesome status line
 Bundle "Lokaltog/vim-powerline"
