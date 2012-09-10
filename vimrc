@@ -85,8 +85,8 @@ set number			" show line numbers
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 set background=dark
-set colorcolumn=+2		" display a line in column 80 (`textwidth` + 2)
-                                " to show you when to line break.
+set colorcolumn=80		" display a line in column 80 to show you
+				" when to line break.
 
 " ----------------------------------------------------------------------------
 "  multiple windows
