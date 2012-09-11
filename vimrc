@@ -257,5 +257,25 @@ set gdefault                    " For :substitute, use the /g flag by default
 
 
 " ----------------------------------------------------------------------------
+" Functions
+" ----------------------------------------------------------------------------
+
+" A standalone function to set the working directory to the project's root, or
+"   to the parent directory of the current file if a root can't be found:
+
+function! s:setcwd()
+    let cph = expand('%:p:h', 1)
+
+    if cph =~ '^.\+://' | return | endif
+    for mkr in ['.git/', '.hg/', '.svn/', '.bzr/', '_darcs/', '.vimprojects']
+      let wd = call('find'.(mkr =~ '/$' ? 'dir' : 'file'), [mkr, cph.';'])
+      if wd != '' | let &acd = 0 | break | endif
+    endfor
+
+    exe 'lcd!' fnameescape(wd == '' ? cph : substitute(wd, mkr.'$', '.', ''))
+endfunction
+
+" ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
+autocmd BufEnter * call s:setcwd()
