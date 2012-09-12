@@ -76,6 +76,9 @@ set showbreak=++\ \ 		" string to put before wrapped screen
                                 " lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
+set cmdheight=2 		" # of lines for the command window
+				" cmdheight=2 helps avoid 'Press ENTER...'
+				" prompts
 
 " Define characters to show when you show formatting
 set listchars=tab:▸\ ,trail:·,precedes:<,extends:…
