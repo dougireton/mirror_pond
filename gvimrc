@@ -10,7 +10,7 @@ set guioptions+=c		" Use :ex command-mode prompts instead of modal
 
 if has("gui_macvim")
   set guifont=Anonymous\ Pro:h14
-  set linespace=4
+  set linespace=2
 elseif has("Win32")
   set guifont=Consolas:h11
 endif
