@@ -41,3 +41,12 @@ nnoremap ` '
 " This is useful with ex commands like :write, :edit, etc.
 " From Practical Vim by Drew Neil, pg 94
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" These functions depend on the Preserve function defined in
+" plugins/settings/functions.vim
+
+" Delete trailing whitespace
+nnoremap <silent> <leader>dw :call Preserve("%s/\\s\\+$//e")<CR>
+
+" Reindent entire file
+nnoremap <silent> <leader>= :call Preserve("normal gg=G")<CR>
