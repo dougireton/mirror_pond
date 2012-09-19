@@ -1,16 +1,12 @@
 " keymappings for Ctrl-P
-nnoremap <leader>pf :CtrlP<cr>
-nnoremap <leader>pb :CtrlPBuffer<cr>
-nnoremap <leader>pm :CtrlPMRU<cr>
+nnoremap <leader>cf :CtrlP<cr>
+nnoremap <leader>cb :CtrlPBuffer<cr>
+nnoremap <leader>cm :CtrlPMRU<cr>
 
-" files = pf
-" buffers = pb
-" mru = pm
+" tags = ct
+" directory = cd
+" line = cl
+" changes = cc
 
-" tags = pt
-" directory = pd
-" line = pl
-" changes = pc
-
-" registers = pr
-" marks = p'
+" registers = cr
+" marks = c'
