@@ -33,6 +33,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'ZoomWin'
 Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-endwise'
 
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
@@ -72,7 +73,7 @@ set linebreak			" For lines longer than the window,
                                 " wrap intelligently. This doesn't
                                 " insert hard line breaks.
 
-set showbreak=++\ \ 		" string to put before wrapped screen
+set showbreak=↪\ \ 		" string to put before wrapped screen
                                 " lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
