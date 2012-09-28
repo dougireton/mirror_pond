@@ -212,9 +212,10 @@ end
 " ----------------------------------------------------------------------------
 "  command line editing
 " ----------------------------------------------------------------------------
-set wildignore+=*.exe,*.swp,.DS_Store	" File tab completion ignores these file patterns
 set wildmode=list:longest,full
 
+" File tab completion ignores these file patterns
+set wildignore+=*.exe,*.swp,.DS_Store
 set wildmenu
 
 " Add guard around 'wildignorecase' to prevent terminal vim error
