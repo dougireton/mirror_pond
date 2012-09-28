@@ -27,6 +27,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Use ^p and ^n to navigate and filter command-line history
+" From Practical Vim by Drew Neil, Tip 34
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
 " repeat the last :substitute command and preserve flags
 " from Practical Vim by Drew Neil: 'Repeat the previous substitute command'
 nnoremap & :&&<Enter>
