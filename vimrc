@@ -186,6 +186,7 @@ set nojoinspaces		" Use only one space after '.' when joining
 " ----------------------------------------------------------------------------
 "  folding
 " ----------------------------------------------------------------------------
+set nofoldenable 		" When opening files, all folds open by default
 
 " ----------------------------------------------------------------------------
 "  diff mode
