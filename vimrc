@@ -26,6 +26,9 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
 
+" Lightweight support for Ruby's Bundler
+Bundle 'tpope/vim-bundler'
+
 " Various editing plugins
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
