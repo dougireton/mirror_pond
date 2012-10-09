@@ -9,8 +9,8 @@ if has("win32") || has("gui_win32")
 
 endif
 
-" exit to Normal mode with 'ii'
-inoremap ii <ESC>
+" exit to Normal mode with 'kj'
+inoremap kj <ESC>
 
 map Y y$			" Make 'Y' yank from cursor pos to EOL. This
 				" makes 'Y' consistent with 'D' which deletes
