@@ -20,13 +20,6 @@ nmap gV `[v`]			" Visually select the text that was last
 				" edited/pasted. From
 				" http://vimcasts.org/episodes/bubbling-text/
 
-" Make it easier to switch between windows
-" From here: http://vimcasts.org/episodes/working-with-windows/
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
 " Use ^p and ^n to navigate and filter command-line history
 " From Practical Vim by Drew Neil, Tip 34
 cnoremap <C-p> <Up>
