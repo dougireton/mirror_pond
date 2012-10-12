@@ -248,7 +248,7 @@ if has("win32") || has("gui_win32")
   endif
 
 else
-  set shell=/usr/local/bin/zsh
+  set shell=/usr/local/bin/zsh\ -i
 endif
 
 " ----------------------------------------------------------------------------
