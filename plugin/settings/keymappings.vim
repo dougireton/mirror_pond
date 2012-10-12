@@ -48,7 +48,3 @@ nnoremap <silent> <leader>dw :call Preserve("%s/\\s\\+$//e")<CR>
 
 " Reindent entire file
 nnoremap <silent> <leader>= :call Preserve("normal gg=G")<CR>
-
-" mute search highlighting
-" from Practical Vim by Drew Neil, Tip 80 'Highlight Search Matches'
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>

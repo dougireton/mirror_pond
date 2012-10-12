@@ -92,9 +92,6 @@ set number			" show line numbers
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 set background=dark
-set hlsearch 			" highlight all matches for last search pattern
-				" clear with <C-l> mapping
-
 set colorcolumn=80		" display a line in column 80 to show you
 				" when to line break.
 
@@ -246,7 +243,6 @@ if has("win32") || has("gui_win32")
     " Fix my trim trailing whitespace command to not run automatically on save
     set shellxquote= 
   endif
-
 else
   set shell=/usr/local/bin/zsh\ -i
 endif
