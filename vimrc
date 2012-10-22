@@ -217,6 +217,8 @@ end
 " ----------------------------------------------------------------------------
 "  command line editing
 " ----------------------------------------------------------------------------
+set history=200 		" Save more commands in history
+				" See Practical Vim, by Drew Neil, pg 68
 set wildmode=list:longest,full
 
 " File tab completion ignores these file patterns
