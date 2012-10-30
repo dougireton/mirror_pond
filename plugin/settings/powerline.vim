@@ -1,2 +1,2 @@
-let g:Powerline_symbols='unicode'
+let g:Powerline_symbols='fancy'
 let g:Powerline_colorscheme='skwp'
