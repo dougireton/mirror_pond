@@ -31,5 +31,5 @@ Vim files for OSX and Windows
 
 5. Install configured bundles:
 
-    Launch `vim`, run `:BundleInstall` 
-    (or `vim +BundleInstall +qall` for CLI lovers)
+    Launch `mvim`, run `:BundleInstall` 
+    (or `mvim +BundleInstall +qall` for CLI lovers)
