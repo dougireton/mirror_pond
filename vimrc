@@ -41,7 +41,6 @@ Bundle 'godlygeek/tabular'
 
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
 
 " PowerLine for an awesome status line
 Bundle "Lokaltog/vim-powerline"
