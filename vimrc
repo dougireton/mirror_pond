@@ -110,10 +110,6 @@ set switchbuf=usetab		" Jump to the 1st open window which contains
                                 " TODO: Add 'split' if you want to split the
                                 " current window for a quickfix error window.
 
-set splitright			" Create new vertically split windows to the
-				" right of the current window instead of to the
-				" left
-
 set statusline=
 set statusline+=b%-1.3n\ >
 set statusline+=\ %{fugitive#statusline()}:
