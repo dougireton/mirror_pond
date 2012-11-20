@@ -4,6 +4,8 @@ setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " highlight ruby whitespace errors
 let ruby_space_errors = 1
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
 
 " set the 'foldmethod' option to 'syntax' and allow folding of
 " classes, modules, methods, code blocks, heredocs and comments.
