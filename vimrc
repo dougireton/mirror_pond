@@ -175,6 +175,8 @@ set showmatch			" when inserting a bracket, briefly jump to its
 set nojoinspaces		" Use only one space after '.' when joining
                                 " lines, instead of two
 
+set completeopt+=longest 	" better omni-complete menu
+
 " ----------------------------------------------------------------------------
 "  tabs and indenting
 " ----------------------------------------------------------------------------
