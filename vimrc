@@ -60,7 +60,7 @@ runtime macros/matchit.vim	" use the built-in Matchit plugin
 set incsearch			" Highlight pattern matches as you type
 set ignorecase			" ignore case when using a search pattern
 set smartcase			" override 'ignorecase' when pattern
-                                " has upper case character
+				" has upper case character
 
 " ----------------------------------------------------------------------------
 "  tags
@@ -70,14 +70,14 @@ set smartcase			" override 'ignorecase' when pattern
 "  displaying text
 " ----------------------------------------------------------------------------
 set scrolloff=3			" number of screen lines to show around
-                                " the cursor
+				" the cursor
 
 set linebreak			" For lines longer than the window,
-                                " wrap intelligently. This doesn't
-                                " insert hard line breaks.
+				" wrap intelligently. This doesn't
+				" insert hard line breaks.
 
 set showbreak=↪\ \ 		" string to put before wrapped screen
-                                " lines
+				" lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
 set cmdheight=2 		" # of lines for the command window
@@ -99,16 +99,16 @@ set colorcolumn=80		" display a line in column 80 to show you
 "  multiple windows
 " ----------------------------------------------------------------------------
 set laststatus=2		" Show a status line, even if there's only one
-                                " Vim window
+				" Vim window
 
 set hidden			" allow switching away from current buffer w/o
 				" writing
 
 set switchbuf=usetab		" Jump to the 1st open window which contains
-                                " specified buffer, even if the buffer is in
-                                " another tab.
-                                " TODO: Add 'split' if you want to split the
-                                " current window for a quickfix error window.
+				" specified buffer, even if the buffer is in
+				" another tab.
+				" TODO: Add 'split' if you want to split the
+				" current window for a quickfix error window.
 
 set statusline=
 set statusline+=b%-1.3n\ >
@@ -125,7 +125,7 @@ set statusline+=\ <\ %{&fenc}
 set statusline+=\ <\ %{&ff}
 set statusline+=\ <\ %p%%
 set statusline+=\ %l:
-set statusline+=%02.3c   "cursor line/total lines
+set statusline+=%02.3c   	"cursor line/total lines
 
 " ----------------------------------------------------------------------------
 "  multiple tab pages
@@ -154,10 +154,10 @@ set ttyfast			" this is the 21st century, people
 " ----------------------------------------------------------------------------
 
 set showcmd			" In the status bar, show incomplete commands
-                                " as they are typed
+				" as they are typed
 
 set ruler			" Always display the current cursor position in
-                                " the Status Bar
+				" the Status Bar
 
 " ----------------------------------------------------------------------------
 "  selecting text
@@ -170,10 +170,10 @@ set clipboard=unnamed		" Yank to the system clipboard by default
 set formatoptions+=j 		" delete comment char on second line when
 				" joining two commented lines
 set showmatch			" when inserting a bracket, briefly jump to its
-                                " match
+				" match
 
 set nojoinspaces		" Use only one space after '.' when joining
-                                " lines, instead of two
+				" lines, instead of two
 
 set completeopt+=longest 	" better omni-complete menu
 
@@ -198,7 +198,7 @@ set nofoldenable 		" When opening files, all folds open by default
 "  reading and writing files
 " ----------------------------------------------------------------------------
 set autoread			" Automatically re-read files changed outside
-                                " of Vim
+				" of Vim
 
 " ----------------------------------------------------------------------------
 "  the swap file
@@ -233,15 +233,15 @@ endif
 
 if has("win32") || has("gui_win32")
 
-  if executable("PowerShell")
-    " Set PowerShell as the shell for running external ! commands
-    " http://stackoverflow.com/questions/7605917/system-with-powershell-in-vim
-    set shell=PowerShell
-    set shellcmdflag=-ExecutionPolicy\ RemoteSigned\ -Command
-    set shellquote=\"
-    " TODO: shellxquote must be a literal space character.
-    " Fix my trim trailing whitespace command to not run automatically on save
-    set shellxquote= 
+if executable("PowerShell")
+  " Set PowerShell as the shell for running external ! commands
+  " http://stackoverflow.com/questions/7605917/system-with-powershell-in-vim
+  set shell=PowerShell
+  set shellcmdflag=-ExecutionPolicy\ RemoteSigned\ -Command
+  set shellquote=\"
+  " TODO: shellxquote must be a literal space character.
+  " Fix my trim trailing whitespace command to not run automatically on save
+  set shellxquote= 
   endif
 else
   set shell=/usr/local/bin/zsh\ -i
@@ -265,7 +265,6 @@ set encoding=utf-8
 " ----------------------------------------------------------------------------
 set gdefault                    " For :substitute, use the /g flag by default
 
-
 " ----------------------------------------------------------------------------
 " Functions
 " ----------------------------------------------------------------------------
@@ -274,15 +273,15 @@ set gdefault                    " For :substitute, use the /g flag by default
 "   to the parent directory of the current file if a root can't be found:
 
 function! s:setcwd()
-    let cph = expand('%:p:h', 1)
+  let cph = expand('%:p:h', 1)
 
-    if cph =~ '^.\+://' | return | endif
-    for mkr in ['.git/', '.hg/', '.svn/', '.bzr/', '_darcs/', '.vimprojects']
-      let wd = call('find'.(mkr =~ '/$' ? 'dir' : 'file'), [mkr, cph.';'])
-      if wd != '' | let &acd = 0 | break | endif
-    endfor
+  if cph =~ '^.\+://' | return | endif
+  for mkr in ['.git/', '.hg/', '.svn/', '.bzr/', '_darcs/', '.vimprojects']
+    let wd = call('find'.(mkr =~ '/$' ? 'dir' : 'file'), [mkr, cph.';'])
+    if wd != '' | let &acd = 0 | break | endif
+  endfor
 
-    exe 'lcd!' fnameescape(wd == '' ? cph : substitute(wd, mkr.'$', '.', ''))
+  exe 'lcd!' fnameescape(wd == '' ? cph : substitute(wd, mkr.'$', '.', ''))
 endfunction
 
 " ----------------------------------------------------------------------------
