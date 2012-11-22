@@ -91,6 +91,7 @@ set number			" show line numbers
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
+colorscheme solarized
 set background=dark
 set colorcolumn=80		" display a line in column 80 to show you
 				" when to line break.

@@ -1,5 +1,3 @@
-colorscheme solarized
-
 " maximize screen height. Set screen width to 84.
 set lines=999 columns=84
 
