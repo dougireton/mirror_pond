@@ -15,6 +15,7 @@ Bundle 'elzr/vim-json'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-git'
 Bundle 'dougireton/vim-ps1'
+Bundle 'kchmck/vim-coffee-script'
 
 " Comment plugin
 Bundle 'tpope/vim-commentary'
