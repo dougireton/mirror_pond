@@ -11,6 +11,9 @@ let g:rubycomplete_classes_in_global = 1
 " classes, modules, methods, code blocks, heredocs and comments.
 let ruby_fold = 1
 
+" Gary Bernhardt's hashrocket
+imap <c-l> <space>=><space>
+
 " Use v or # to get a variable interpolation (inside of a string)}
 " ysiw#   Wrap the token under the cursor in #{}
 " v...s#  Wrap the selection in #{}
