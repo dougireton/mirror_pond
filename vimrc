@@ -70,47 +70,47 @@ set smartcase			" override 'ignorecase' when pattern
 " ----------------------------------------------------------------------------
 "  displaying text
 " ----------------------------------------------------------------------------
-set scrolloff=3			" number of screen lines to show around
-				" the cursor
+set scrolloff=3       " number of screen lines to show around
+                      " the cursor
 
-set linebreak			" For lines longer than the window,
-				" wrap intelligently. This doesn't
-				" insert hard line breaks.
+set linebreak			    " For lines longer than the window,
+                      " wrap intelligently. This doesn't
+                      " insert hard line breaks.
 
 set showbreak=↪\ \ 		" string to put before wrapped screen
 				" lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
-set cmdheight=2 		" # of lines for the command window
-				" cmdheight=2 helps avoid 'Press ENTER...'
-				" prompts
+set cmdheight=2 		  " # of lines for the command window
+                      " cmdheight=2 helps avoid 'Press ENTER...'
+                      " prompts
 
 " Define characters to show when you show formatting
 set listchars=tab:▸\ ,trail:·,precedes:<,extends:…
-set number			" show line numbers
+set number			      " show line numbers
 
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 colorscheme solarized
 set background=dark
-set colorcolumn=80		" display a line in column 80 to show you
-				" when to line break.
+set colorcolumn=80    " display a line in column 80 to show you
+				              " when to line break.
 
 " ----------------------------------------------------------------------------
 "  multiple windows
 " ----------------------------------------------------------------------------
-set laststatus=2		" Show a status line, even if there's only one
-				" Vim window
+set laststatus=2  		" Show a status line, even if there's only one
+                      " Vim window
 
 set hidden			" allow switching away from current buffer w/o
 				" writing
 
-set switchbuf=usetab		" Jump to the 1st open window which contains
-				" specified buffer, even if the buffer is in
-				" another tab.
-				" TODO: Add 'split' if you want to split the
-				" current window for a quickfix error window.
+set switchbuf=usetab " Jump to the 1st open window which contains
+				             " specified buffer, even if the buffer is in
+				             " another tab.
+				             " TODO: Add 'split' if you want to split the
+				             " current window for a quickfix error window.
 
 set statusline=
 set statusline+=b%-1.3n\ >
@@ -136,14 +136,14 @@ set statusline+=%02.3c   	"cursor line/total lines
 " ----------------------------------------------------------------------------
 "  terminal
 " ----------------------------------------------------------------------------
-set ttyfast			" this is the 21st century, people
+set ttyfast			    " this is the 21st century, people
 
 " ----------------------------------------------------------------------------
 "  using the mouse
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  GUI				" Set these options in .gvimrc
+"  GUI				      " Set these options in .gvimrc
 " See help for 'setting-guifont' for tips on how to set guifont on Mac vs Windows
 " ----------------------------------------------------------------------------
 
@@ -155,27 +155,27 @@ set ttyfast			" this is the 21st century, people
 "  messages and info
 " ----------------------------------------------------------------------------
 
-set showcmd			" In the status bar, show incomplete commands
-				" as they are typed
+set showcmd			      " In the status bar, show incomplete commands
+                      " as they are typed
 
-set ruler			" Always display the current cursor position in
-				" the Status Bar
+set ruler			        " Always display the current cursor position in
+                      " the Status Bar
 
 " ----------------------------------------------------------------------------
 "  selecting text
 " ----------------------------------------------------------------------------
-set clipboard=unnamed		" Yank to the system clipboard by default
+set clipboard=unnamed	" Yank to the system clipboard by default
 
 " ----------------------------------------------------------------------------
 "  editing text			" TODO: look at these options
 " ----------------------------------------------------------------------------
-set formatoptions+=j 		" delete comment char on second line when
-				" joining two commented lines
-set showmatch			" when inserting a bracket, briefly jump to its
-				" match
+set formatoptions+=j 	" delete comment char on second line when
+                      " joining two commented lines
+set showmatch			    " when inserting a bracket, briefly jump to its
+                      " match
 
-set nojoinspaces		" Use only one space after '.' when joining
-				" lines, instead of two
+set nojoinspaces		  " Use only one space after '.' when joining
+				              " lines, instead of two
 
 set completeopt+=longest 	" better omni-complete menu
 
@@ -186,7 +186,7 @@ set completeopt+=longest 	" better omni-complete menu
 " ----------------------------------------------------------------------------
 "  folding
 " ----------------------------------------------------------------------------
-set nofoldenable 		" When opening files, all folds open by default
+set nofoldenable 		  " When opening files, all folds open by default
 
 " ----------------------------------------------------------------------------
 "  diff mode
@@ -199,7 +199,7 @@ set nofoldenable 		" When opening files, all folds open by default
 " ----------------------------------------------------------------------------
 "  reading and writing files
 " ----------------------------------------------------------------------------
-set autoread			" Automatically re-read files changed outside
+set autoread			    " Automatically re-read files changed outside
 				" of Vim
 
 " ----------------------------------------------------------------------------
@@ -234,16 +234,15 @@ endif
 " ----------------------------------------------------------------------------
 
 if has("win32") || has("gui_win32")
-
-if executable("PowerShell")
-  " Set PowerShell as the shell for running external ! commands
-  " http://stackoverflow.com/questions/7605917/system-with-powershell-in-vim
-  set shell=PowerShell
-  set shellcmdflag=-ExecutionPolicy\ RemoteSigned\ -Command
-  set shellquote=\"
-  " TODO: shellxquote must be a literal space character.
-  " Fix my trim trailing whitespace command to not run automatically on save
-  set shellxquote= 
+  if executable("PowerShell")
+    " Set PowerShell as the shell for running external ! commands
+    " http://stackoverflow.com/questions/7605917/system-with-powershell-in-vim
+    set shell=PowerShell
+    set shellcmdflag=-ExecutionPolicy\ RemoteSigned\ -Command
+    set shellquote=\"
+    " TODO: shellxquote must be a literal space character.
+    " Fix my trim trailing whitespace command to not run automatically on save
+    set shellxquote= 
   endif
 else
   set shell=/usr/local/bin/zsh\ -i
