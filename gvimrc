@@ -1,10 +1,11 @@
 " maximize screen height. Set screen width to 84.
-set lines=999 columns=84
+set lines=99 columns=178
+" set fullscreen
 
 set guioptions-=T		" Remove toolbar
 set guioptions-=t		" Remove tear-off menus
 set guioptions+=c		" Use :ex command-mode prompts instead of modal
-				" dialogs
+                    " dialogs
 
 if has("gui_macvim")
   " set guifont=Anonymous\ Pro:h14
