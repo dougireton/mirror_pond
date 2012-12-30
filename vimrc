@@ -44,7 +44,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 
 " PowerLine for an awesome status line
-Bundle "Lokaltog/vim-powerline"
+Bundle "Lokaltog/powerline"
 
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
