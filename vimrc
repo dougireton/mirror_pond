@@ -49,11 +49,18 @@ Bundle "Lokaltog/powerline"
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 
-filetype plugin indent on	" Turn on Filetype detection, plugins, and
-				" indent
-syntax enable			" Turn on syntax highlighting
+if has('autocmd')
+  filetype plugin indent on	  " Turn on Filetype detection, plugins, and
+                              " indent
+endif
 
-runtime macros/matchit.vim	" use the built-in Matchit plugin
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable			" Turn on syntax highlighting
+endif
+
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim   " use the built-in Matchit pluginm
+endif
 
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
