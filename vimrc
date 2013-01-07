@@ -289,3 +289,7 @@ endfunction
 " Autocmds
 " ----------------------------------------------------------------------------
 autocmd BufEnter * call s:setcwd()
+
+" Make gf work on Chef include_recipe lines
+" Add all cookbooks/*/recipe dirs to Vim's path variable
+autocmd BufRead,BufNewFile */cookbooks/*/recipes/*.rb setlocal path+=recipes;/cookbooks/**1
