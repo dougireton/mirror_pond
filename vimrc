@@ -88,6 +88,8 @@ set showbreak=↪\ \ 		" string to put before wrapped screen
 				" lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
+set display+=lastline " show last line, even if it doesn't fit in the window
+
 set cmdheight=2 		  " # of lines for the command window
                       " cmdheight=2 helps avoid 'Press ENTER...'
                       " prompts
