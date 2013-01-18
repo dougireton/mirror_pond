@@ -281,7 +281,7 @@ set gdefault                    " For :substitute, use the /g flag by default
 
 " A standalone function to set the working directory to the project's root, or
 "   to the parent directory of the current file if a root can't be found:
-
+" TODO: Use Fugitive's set CWD function instead
 function! s:setcwd()
   let cph = expand('%:p:h', 1)
 
