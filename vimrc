@@ -122,7 +122,7 @@ set switchbuf=usetab " Jump to the 1st open window which contains
 				             " current window for a quickfix error window.
 
 set statusline=
-set statusline+=b%-1.3n\ >
+set statusline+=b%-1.3n\ >                    " buffer number
 set statusline+=\ %{fugitive#statusline()}:
 set statusline+=\ %F
 set statusline+=\ %M
@@ -276,28 +276,8 @@ set encoding=utf-8
 set gdefault                    " For :substitute, use the /g flag by default
 
 " ----------------------------------------------------------------------------
-" Functions
-" ----------------------------------------------------------------------------
-
-" A standalone function to set the working directory to the project's root, or
-"   to the parent directory of the current file if a root can't be found:
-" TODO: Use Fugitive's set CWD function instead
-function! s:setcwd()
-  let cph = expand('%:p:h', 1)
-
-  if cph =~ '^.\+://' | return | endif
-  for mkr in ['.git/', '.hg/', '.svn/', '.bzr/', '_darcs/', '.vimprojects']
-    let wd = call('find'.(mkr =~ '/$' ? 'dir' : 'file'), [mkr, cph.';'])
-    if wd != '' | let &acd = 0 | break | endif
-  endfor
-
-  exe 'lcd!' fnameescape(wd == '' ? cph : substitute(wd, mkr.'$', '.', ''))
-endfunction
-
-" ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
-autocmd BufEnter * call s:setcwd()
 
 " Make gf work on Chef include_recipe lines
 " Add all cookbooks/*/recipe dirs to Vim's path variable
