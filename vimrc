@@ -95,7 +95,14 @@ set cmdheight=2 		  " # of lines for the command window
                       " prompts
 
 " Define characters to show when you show formatting
-set listchars=tab:▸\ ,trail:·,precedes:<,extends:…
+" stolen from https://github.com/tpope/vim-sensible
+if &listchars ==# 'eol:$'
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+  if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
+    let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
+  endif
+endif
+
 set number			      " show line numbers
 
 " ----------------------------------------------------------------------------
@@ -187,6 +194,9 @@ set nojoinspaces		  " Use only one space after '.' when joining
 				              " lines, instead of two
 
 set completeopt+=longest 	" better omni-complete menu
+
+set nrformats-=octal      " don't treat numbers with leading zeros as octal
+                          " when incrementing/decrementing
 
 " ----------------------------------------------------------------------------
 "  tabs and indenting
