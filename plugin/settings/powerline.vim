@@ -1,4 +1,1 @@
-source $HOME/.vim/bundle/powerline/powerline/ext/vim/powerline.vim
-
-let g:Powerline_symbols='fancy'
-let g:Powerline_colorscheme='solarized256'
+python from powerline.bindings.vim import source_plugin; source_plugin()
