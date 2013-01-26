@@ -201,6 +201,7 @@ set nrformats-=octal      " don't treat numbers with leading zeros as octal
 " ----------------------------------------------------------------------------
 "  tabs and indenting
 " ----------------------------------------------------------------------------
+set shiftround            " round to 'shiftwidth' for "<<" and ">>" 
 
 " ----------------------------------------------------------------------------
 "  folding
