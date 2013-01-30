@@ -25,9 +25,6 @@ let b:surround_35  = "#{ \r }"    " #
 let b:surround_45 = "<% \r -%>"   " -
 let b:surround_61 = "<%= \r %>"   " =
 
-" Activate Ruby.vim's tooltips for Ruby keywords
-setlocal ballooneval
-
 " The compiler plugins contain instructions which allow Vim to run the
 " specified source file with an appropriate executable, parse any errors, and
 " jump to the corresponding error location if required.
