@@ -267,7 +267,7 @@ if has("win32") || has("gui_win32")
     set shellxquote= 
   endif
 else
-  set shell=/usr/local/bin/zsh\ -i
+  " set shell=/usr/local/bin/zsh\ -i
 endif
 
 " ----------------------------------------------------------------------------
