@@ -185,6 +185,7 @@ set clipboard=unnamed	" Yank to the system clipboard by default
 " ----------------------------------------------------------------------------
 "  editing text			" TODO: look at these options
 " ----------------------------------------------------------------------------
+set backspace=indent,eol,start  "backspace over everything
 set formatoptions+=j 	" delete comment char on second line when
                       " joining two commented lines
 set showmatch			    " when inserting a bracket, briefly jump to its
