@@ -15,7 +15,7 @@ nmap <silent> <leader>d <Plug>NetrwReturn
 let g:netrw_preview = 1
 
 " 30% of window for netrw, 70% for file
-let g:netrw_winsize = 70
+let g:netrw_winsize = 30
 
 " don't write error msgs to separate window
 let g:netrw_use_errorwindow = 0
