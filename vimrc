@@ -178,6 +178,9 @@ set showcmd			      " In the status bar, show incomplete commands
 set ruler			        " Always display the current cursor position in
                       " the Status Bar
 
+set confirm           " Ask to save buffer instead of failing when executing
+                      " commands which close buffers
+
 " ----------------------------------------------------------------------------
 "  selecting text
 " ----------------------------------------------------------------------------
