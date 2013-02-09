@@ -144,7 +144,9 @@ set statusline+=\ <\ %{&fenc}
 set statusline+=\ <\ %{&ff}
 set statusline+=\ <\ %p%%
 set statusline+=\ %l:
-set statusline+=%02.3c   	"cursor line/total lines
+set statusline+=%02.3c   	" cursor line/total lines
+
+set helpheight=30         " Set window height when opening Vim help windows
 
 " ----------------------------------------------------------------------------
 "  multiple tab pages
