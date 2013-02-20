@@ -62,6 +62,8 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim   " use the built-in Matchit pluginm
 endif
 
+runtime! ftplugin/man.vim
+
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
 " ----------------------------------------------------------------------------
