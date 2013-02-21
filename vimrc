@@ -1,4 +1,4 @@
-" ----------------------------------------------------------------------------
+ ----------------------------------------------------------------------------
 "  Vundle setup
 " ----------------------------------------------------------------------------
 filetype off 			" Required for Vundle
@@ -43,9 +43,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 
-" PowerLine for an awesome status line
-" Bundle "Lokaltog/powerline"
-
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 
@@ -72,7 +69,7 @@ set nostartofline   " keep cursor in same column for long-range motion cmds
 set incsearch			  " Highlight pattern matches as you type
 set ignorecase			" ignore case when using a search pattern
 set smartcase			  " override 'ignorecase' when pattern
-				            " has upper case character
+                    " has upper case character
 
 " ----------------------------------------------------------------------------
 "  tags
@@ -89,7 +86,7 @@ set linebreak			    " For lines longer than the window,
                       " insert hard line breaks.
 
 set showbreak=↪\ \ 		" string to put before wrapped screen
-				" lines
+                      " lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
 set display+=lastline " show last line, even if it doesn't fit in the window
@@ -115,7 +112,7 @@ set number			      " show line numbers
 colorscheme solarized
 set background=dark
 set colorcolumn=80    " display a line in column 80 to show you
-				              " when to line break.
+                      " when to line break.
 
 " ----------------------------------------------------------------------------
 "  multiple windows
@@ -123,14 +120,14 @@ set colorcolumn=80    " display a line in column 80 to show you
 set laststatus=2  		" Show a status line, even if there's only one
                       " Vim window
 
-set hidden			" allow switching away from current buffer w/o
-				" writing
+set hidden		    	  " allow switching away from current buffer w/o
+                      " writing
 
 set switchbuf=usetab " Jump to the 1st open window which contains
-				             " specified buffer, even if the buffer is in
-				             " another tab.
-				             " TODO: Add 'split' if you want to split the
-				             " current window for a quickfix error window.
+                      " specified buffer, even if the buffer is in
+                      " another tab.
+                      " TODO: Add 'split' if you want to split the
+                      " current window for a quickfix error window.
 
 set statusline=
 set statusline+=b%-1.3n\ >                    " buffer number
@@ -158,7 +155,7 @@ set helpheight=30         " Set window height when opening Vim help windows
 " ----------------------------------------------------------------------------
 "  terminal
 " ----------------------------------------------------------------------------
-set ttyfast			    " this is the 21st century, people
+set ttyfast			      " this is the 21st century, people
 
 " ----------------------------------------------------------------------------
 "  using the mouse
@@ -177,14 +174,14 @@ set ttyfast			    " this is the 21st century, people
 "  messages and info
 " ----------------------------------------------------------------------------
 
-set showcmd			      " In the status bar, show incomplete commands
-                      " as they are typed
+set showcmd			    " In the status bar, show incomplete commands
+                    " as they are typed
 
-set ruler			        " Always display the current cursor position in
-                      " the Status Bar
+set ruler			      " Always display the current cursor position in
+                    " the Status Bar
 
-set confirm           " Ask to save buffer instead of failing when executing
-                      " commands which close buffers
+set confirm         " Ask to save buffer instead of failing when executing
+                    " commands which close buffers
 
 " ----------------------------------------------------------------------------
 "  selecting text
@@ -195,13 +192,17 @@ set clipboard=unnamed	" Yank to the system clipboard by default
 "  editing text			" TODO: look at these options
 " ----------------------------------------------------------------------------
 set backspace=indent,eol,start  "backspace over everything
-set formatoptions+=j 	" delete comment char on second line when
-                      " joining two commented lines
-set showmatch			    " when inserting a bracket, briefly jump to its
-                      " match
 
-set nojoinspaces		  " Use only one space after '.' when joining
-				              " lines, instead of two
+if v:version > 7.03 || v:version == 7.03 && has("patch541")
+  set formatoptions+=j 	" delete comment char on second line when
+                        " joining two commented lines
+endif
+
+set showmatch  			    " when inserting a bracket, briefly jump to its
+                        " match
+
+set nojoinspaces	  	  " Use only one space after '.' when joining
+                        " lines, instead of two
 
 set completeopt+=longest 	" better omni-complete menu
 
@@ -231,7 +232,7 @@ set nofoldenable 		  " When opening files, all folds open by default
 "  reading and writing files
 " ----------------------------------------------------------------------------
 set autoread			    " Automatically re-read files changed outside
-				" of Vim
+                      " of Vim
 
 " ----------------------------------------------------------------------------
 "  the swap file
@@ -242,13 +243,14 @@ if has("win32") || has("win64")
 else
   " Vim will try this ordered list of directories for .swp files
   set directory=~/tmp,.,/var/tmp,/tmp
-end
+endif
 
 " ----------------------------------------------------------------------------
 "  command line editing
 " ----------------------------------------------------------------------------
 set history=200 		" Save more commands in history
-				" See Practical Vim, by Drew Neil, pg 68
+                    " See Practical Vim, by Drew Neil, pg 68
+
 set wildmode=list:longest,full
 
 " File tab completion ignores these file patterns
@@ -275,8 +277,6 @@ if has("win32") || has("gui_win32")
     " Fix my trim trailing whitespace command to not run automatically on save
     set shellxquote= 
   endif
-else
-  " set shell=/usr/local/bin/zsh\ -i
 endif
 
 " ----------------------------------------------------------------------------
