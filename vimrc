@@ -193,7 +193,7 @@ set clipboard=unnamed	" Yank to the system clipboard by default
 " ----------------------------------------------------------------------------
 set backspace=indent,eol,start  "backspace over everything
 
-if v:version > 7.03 || v:version == 7.03 && has("patch541")
+if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j 	" delete comment char on second line when
                         " joining two commented lines
 endif
