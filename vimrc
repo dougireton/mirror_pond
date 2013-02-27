@@ -65,11 +65,11 @@ runtime! ftplugin/man.vim
 " ----------------------------------------------------------------------------
 "  moving around, searching and patterns
 " ----------------------------------------------------------------------------
-set nostartofline   " keep cursor in same column for long-range motion cmds
-set incsearch			  " Highlight pattern matches as you type
-set ignorecase			" ignore case when using a search pattern
-set smartcase			  " override 'ignorecase' when pattern
-                    " has upper case character
+set nostartofline     " keep cursor in same column for long-range motion cmds
+set incsearch			    " Highlight pattern matches as you type
+set ignorecase			  " ignore case when using a search pattern
+set smartcase			    " override 'ignorecase' when pattern
+                      " has upper case character
 
 " ----------------------------------------------------------------------------
 "  tags
