@@ -12,13 +12,15 @@ endif
 " exit to Normal mode with 'kj'
 inoremap kj <ESC>
 
-map Y y$			" Make 'Y' yank from cursor pos to EOL. This
-				" makes 'Y' consistent with 'D' which deletes
-				" from cursor pos to EOL.
+" Make 'Y' yank from cursor pos to EOL. This
+" makes 'Y' consistent with 'D' which deletes
+" from cursor pos to EOL.
+map Y y$
 
-nmap gV `[v`]			" Visually select the text that was last
-				" edited/pasted. From
-				" http://vimcasts.org/episodes/bubbling-text/
+" Visually select the text that was last
+" edited/pasted. From
+" http://vimcasts.org/episodes/bubbling-text/
+nmap gV `[v`]
 
 " Make it easier to switch between windows
 " From here: http://vimcasts.org/episodes/working-with-windows/
