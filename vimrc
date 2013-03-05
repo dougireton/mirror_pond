@@ -231,6 +231,7 @@ set nofoldenable 		  " When opening files, all folds open by default
 " ----------------------------------------------------------------------------
 "  diff mode
 " ----------------------------------------------------------------------------
+set diffopt+=vertical     " start diff mode with vertical splits by default
 
 " ----------------------------------------------------------------------------
 "  mapping
