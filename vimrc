@@ -257,6 +257,12 @@ set wildmode=list:longest,full
 set wildignore+=*.exe,*.swp,.DS_Store
 set wildmenu
 
+" Configure persistent undo
+if v:version >= 703 && has("persistent_undo")
+  set undofile
+  set undodir=$HOME/.vim/undo
+endif
+
 " Add guard around 'wildignorecase' to prevent terminal vim error
 if exists('&wildignorecase')
   set wildignorecase
