@@ -16,6 +16,9 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-git'
 Bundle 'dougireton/vim-ps1'
 
+" Wiki
+Bundle 'vimwiki'
+
 " Comment plugin
 Bundle 'tpope/vim-commentary'
 
@@ -177,6 +180,10 @@ set ttyfast			      " this is the 21st century, people
 set showcmd			    " In the status bar, show incomplete commands
                     " as they are typed
 
+set noshowmode      " don't display the current mode (Insert, Visual, Replace)
+                    " in the status line. This info is already shown in the 
+                    " Powerline status bar.
+
 set ruler			      " Always display the current cursor position in
                     " the Status Bar
 
@@ -238,11 +245,22 @@ set autoread			    " Automatically re-read files changed outside
 "  the swap file
 " ----------------------------------------------------------------------------
 
-if has("win32") || has("win64")
-  set directory=$TEMP
-else
-  " Vim will try this ordered list of directories for .swp files
-  set directory=~/tmp,.,/var/tmp,/tmp
+" Set swap file, backup and undo directories to sensible locations
+" Taken from https://github.com/tpope/vim-sensible
+let s:dir = has('win32') ? '$APPDATA/Vim' : match(system('uname'), "Darwin") > -1 ? '~/Library/Vim' : empty($XDG_DATA_HOME) ? '~/.local/share/vim' : '$XDG_DATA_HOME/vim'
+if isdirectory(expand(s:dir))
+  if &directory =~# '^\.,'
+    let &directory = expand(s:dir) . '/swap//,' . &directory
+  endif
+  if &backupdir =~# '^\.,'
+    let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+  endif
+  if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+    let &undodir = expand(s:dir) . '/undo//,' . &undodir
+  endif
+endif
+if exists('+undofile')
+  set undofile
 endif
 
 " ----------------------------------------------------------------------------
@@ -256,12 +274,6 @@ set wildmode=list:longest,full
 " File tab completion ignores these file patterns
 set wildignore+=*.exe,*.swp,.DS_Store
 set wildmenu
-
-" Configure persistent undo
-if v:version >= 703 && has("persistent_undo")
-  set undofile
-  set undodir=$HOME/.vim/undo
-endif
 
 " Add guard around 'wildignorecase' to prevent terminal vim error
 if exists('&wildignorecase')
