@@ -58,8 +58,9 @@ if has('syntax') && !exists('g:syntax_on')
   syntax enable			" Turn on syntax highlighting
 endif
 
+" Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim   " use the built-in Matchit pluginm
+  runtime! macros/matchit.vim
 endif
 
 " load the man plugin for a nice man viewer
