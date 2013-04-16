@@ -33,6 +33,8 @@ Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-bundler'
 
 " Various editing plugins
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
