@@ -117,8 +117,11 @@ set number			      " show line numbers
 " ----------------------------------------------------------------------------
 colorscheme solarized
 set background=dark
-set colorcolumn=80    " display a line in column 80 to show you
-                      " when to line break.
+
+if exists('+colorcolumn')
+  set colorcolumn=80    " display a line in column 80 to show you
+                        " when to line break.
+endif
 
 " ----------------------------------------------------------------------------
 "  multiple windows
@@ -228,7 +231,9 @@ set shiftround            " round to 'shiftwidth' for "<<" and ">>"
 " ----------------------------------------------------------------------------
 "  folding
 " ----------------------------------------------------------------------------
-set nofoldenable 		  " When opening files, all folds open by default
+if has('folding')
+  set nofoldenable 		  " When opening files, all folds open by default
+endif
 
 " ----------------------------------------------------------------------------
 "  diff mode
