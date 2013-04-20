@@ -1,11 +1,11 @@
 if exists(":Tabularize")
-  nnoremap <Leader>a= :Tabularize /=<CR>
-  vnoremap <Leader>a= :Tabularize /=<CR>
+  nnoremap <silent> <Leader>a= :call Preserve("Tabularize /=")<CR>
+  vnoremap <silent> <Leader>a= :call Preserve("Tabularize /=")<CR>
 
-  nnoremap <Leader>a: :Tabularize /:\zs<CR>
-  vnoremap <Leader>a: :Tabularize /:\zs<CR>
+  nnoremap <silent> <Leader>a: :call Preserve("Tabularize /:\zs")<CR>
+  vnoremap <silent> <Leader>a: :call Preserve("Tabularize /:\zs")<CR>
 
-  nnoremap <Leader>a> :Tabularize /=><CR>
-  vnoremap <Leader>a> :Tabularize /=><CR>
+  nnoremap <silent> <Leader>a> :call Preserve("Tabularize /=>")<CR>
+  vnoremap <silent> <Leader>a> :call Preserve("Tabularize /=>")<CR>
 endif
 
