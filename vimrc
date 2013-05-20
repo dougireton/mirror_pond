@@ -25,6 +25,9 @@ Bundle 'tpope/vim-commentary'
 " Syntax check on buffer save
 Bundle 'scrooloose/syntastic'
 
+" Testing plugins
+Bundle 'thoughtbot/vim-rspec'
+
 " Git plugins
 Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
