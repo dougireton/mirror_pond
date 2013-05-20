@@ -53,6 +53,7 @@ Bundle 'mileszs/ack.vim'
 
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'endel/vim-github-colorscheme'
 
 if has('autocmd')
   filetype plugin indent on	  " Turn on Filetype detection, plugins, and
