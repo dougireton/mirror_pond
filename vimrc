@@ -242,6 +242,7 @@ endif
 " ----------------------------------------------------------------------------
 "  diff mode
 " ----------------------------------------------------------------------------
+set diffopt+=vertical     " start diff mode with vertical splits by default
 
 " diff mode with vertical splits please
 set diffopt+=vertical
