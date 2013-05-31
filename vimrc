@@ -9,35 +9,8 @@ call vundle#rc()
 " Let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
 
-" Language-specific syntax files
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'elzr/vim-json'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-git'
-Bundle 'dougireton/vim-ps1'
-
-" Wiki
-Bundle 'vimwiki'
-
-" Comment plugin
-Bundle 'tpope/vim-commentary'
-
-" Syntax check on buffer save
-Bundle 'scrooloose/syntastic'
-
-" Testing plugins
-Bundle 'thoughtbot/vim-rspec'
-
-" Git plugins
-Bundle 'tpope/vim-fugitive'
-Bundle 'gregsexton/gitv'
-
-" Lightweight support for Ruby's Bundler
-Bundle 'tpope/vim-bundler'
-
 " Various editing plugins
 Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
@@ -47,13 +20,48 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'godlygeek/tabular'
 
+" Comment plugin
+Bundle 'tpope/vim-commentary'
+
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'mhinz/vim-startify'
+
+" Buffer plugins
+Bundle 'bufkill.vim'
 
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'endel/vim-github-colorscheme'
+
+" Ruby plugins
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-bundler'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
+" JSON plugins
+Bundle 'elzr/vim-json'
+
+" Markdown plugins
+Bundle 'tpope/vim-markdown'
+
+" PowerShell plugins
+Bundle 'dougireton/vim-ps1'
+
+" Wiki
+Bundle 'vimwiki'
+
+" Syntax check on buffer save
+Bundle 'scrooloose/syntastic'
+
+" Source Control plugins
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
+Bundle 'gregsexton/gitv'
+Bundle 'mhinz/vim-signify'
+
 
 if has('autocmd')
   filetype plugin indent on	  " Turn on Filetype detection, plugins, and
