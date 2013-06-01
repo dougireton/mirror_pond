@@ -10,16 +10,16 @@
 "
 "============================================================================
 
-if exists("g:loaded_syntastic_ruby_foodcritic_checker")
+if exists("g:loaded_syntastic_chef_foodcritic_checker")
   finish
 endif
-let g:loaded_syntastic_ruby_foodcritic_checker=1
+let g:loaded_syntastic_chef_foodcritic_checker=1
 
-function! SyntaxCheckers_ruby_foodcritic_IsAvailable()
+function! SyntaxCheckers_chef_foodcritic_IsAvailable()
   return executable('foodcritic')
 endfunction
 
-function! SyntaxCheckers_ruby_foodcritic_GetLocList()
+function! SyntaxCheckers_chef_foodcritic_GetLocList()
   let makeprg = syntastic#makeprg#build({
         \ 'exe': 'foodcritic',
         \ 'args': '' })
@@ -31,5 +31,5 @@ function! SyntaxCheckers_ruby_foodcritic_GetLocList()
 endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-      \ 'filetype': 'ruby',
+      \ 'filetype': 'chef',
       \ 'name': 'foodcritic'})
