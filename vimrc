@@ -27,6 +27,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'mhinz/vim-startify'
+Bundle 'chrisbra/Recover.vim'
 
 " Buffer plugins
 Bundle 'bufkill.vim'
