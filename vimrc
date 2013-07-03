@@ -19,6 +19,7 @@ Bundle 'ZoomWin'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'godlygeek/tabular'
+Bundle 'HarnoRanaivo/vim-neatfoldtext'
 
 " Comment plugin
 Bundle 'tpope/vim-commentary'
@@ -212,7 +213,11 @@ set confirm         " Ask to save buffer instead of failing when executing
 " ----------------------------------------------------------------------------
 "  selecting text
 " ----------------------------------------------------------------------------
-set clipboard=unnamed	" Yank to the system clipboard by default
+
+" See http://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
+if $TMUX == ""
+  set clipboard=unnamed	" Yank to the system clipboard by default
+endif
 
 " ----------------------------------------------------------------------------
 "  editing text			" TODO: look at these options
