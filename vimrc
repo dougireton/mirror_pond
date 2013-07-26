@@ -30,6 +30,10 @@ Bundle 'mileszs/ack.vim'
 Bundle 'mhinz/vim-startify'
 Bundle 'chrisbra/Recover.vim'
 
+" Tmux plugins
+" Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'sjl/vitality.vim'
+
 " Buffer plugins
 Bundle 'bufkill.vim'
 
