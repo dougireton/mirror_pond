@@ -247,8 +247,12 @@ set nrformats-=octal      " don't treat numbers with leading zeros as octal
 " ----------------------------------------------------------------------------
 "  tabs and indenting
 " ----------------------------------------------------------------------------
+set tabstop=2             " tab = 2 spaces
+set shiftwidth=2          " autoindent indents 2 spaces
 set smarttab              " <TAB> in front of line inserts 'shiftwidth' blanks
+set softtabstop=2
 set shiftround            " round to 'shiftwidth' for "<<" and ">>" 
+set expandtab
 
 " ----------------------------------------------------------------------------
 "  folding
