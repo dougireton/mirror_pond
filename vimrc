@@ -257,6 +257,8 @@ if has('folding')
   set nofoldenable 		  " When opening files, all folds open by default
 endif
 
+set foldtext=NeatFoldText()
+
 " ----------------------------------------------------------------------------
 "  diff mode
 " ----------------------------------------------------------------------------
