@@ -26,13 +26,19 @@ Bundle 'tpope/vim-commentary'
 
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
+
+if executable('ack')
+  Bundle 'mileszs/ack.vim'
+endif
+
 Bundle 'mhinz/vim-startify'
 Bundle 'chrisbra/Recover.vim'
 
 " Tmux plugins
-" Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'sjl/vitality.vim'
+if executable('tmux')
+  Bundle 'christoomey/vim-tmux-navigator'
+  Bundle 'sjl/vitality.vim'
+endif
 
 " Buffer plugins
 Bundle 'bufkill.vim'
@@ -103,21 +109,20 @@ set smartcase			    " override 'ignorecase' when pattern
 "  displaying text
 " ----------------------------------------------------------------------------
 set scrolloff=3       " number of screen lines to show around
-                      " the cursor
+" the cursor
 
 set linebreak			    " For lines longer than the window,
                       " wrap intelligently. This doesn't
                       " insert hard line breaks.
 
 set showbreak=↪\ \ 		" string to put before wrapped screen
-                      " lines
+" lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
 set display+=lastline " show last line, even if it doesn't fit in the window
 
 set cmdheight=2 		  " # of lines for the command window
-                      " cmdheight=2 helps avoid 'Press ENTER...'
-                      " prompts
+                      " cmdheight=2 helps avoid 'Press ENTER...' prompts
 
 " Define characters to show when you show formatting
 " stolen from https://github.com/tpope/vim-sensible
@@ -138,19 +143,19 @@ set background=dark
 
 if exists('+colorcolumn')
   set colorcolumn=80    " display a line in column 80 to show you
-                        " when to line break.
+                        " where to line break.
 endif
 
 " ----------------------------------------------------------------------------
 "  multiple windows
 " ----------------------------------------------------------------------------
-set laststatus=2  		" Show a status line, even if there's only one
+set laststatus=2  	  " Show a status line, even if there's only one
                       " Vim window
 
 set hidden		    	  " allow switching away from current buffer w/o
                       " writing
 
-set switchbuf=usetab " Jump to the 1st open window which contains
+set switchbuf=usetab  " Jump to the 1st open window which contains
                       " specified buffer, even if the buffer is in
                       " another tab.
                       " TODO: Add 'split' if you want to split the
@@ -229,15 +234,15 @@ endif
 set backspace=indent,eol,start  "backspace over everything
 
 if v:version > 703 || v:version == 703 && has("patch541")
-  set formatoptions+=j 	" delete comment char on second line when
-                        " joining two commented lines
+  set formatoptions+=j 	  " delete comment char on second line when
+                          " joining two commented lines
 endif
 
-set showmatch  			    " when inserting a bracket, briefly jump to its
-                        " match
+set showmatch  			      " when inserting a bracket, briefly jump to its
+                          " match
 
-set nojoinspaces	  	  " Use only one space after '.' when joining
-                        " lines, instead of two
+set nojoinspaces	  	    " Use only one space after '.' when joining
+                          " lines, instead of two
 
 set completeopt+=longest 	" better omni-complete menu
 
@@ -258,7 +263,7 @@ set expandtab
 "  folding
 " ----------------------------------------------------------------------------
 if has('folding')
-  set nofoldenable 		  " When opening files, all folds open by default
+  set nofoldenable 		    " When opening files, all folds open by default
 endif
 
 set foldtext=NeatFoldText()
@@ -266,8 +271,8 @@ set foldtext=NeatFoldText()
 " ----------------------------------------------------------------------------
 "  diff mode
 " ----------------------------------------------------------------------------
-set diffopt+=vertical     " start diff mode with vertical splits by default
-set diffopt+=vertical     " diff mode with vertical splits please
+set diffopt+=vertical       " start diff mode with vertical splits by default
+set diffopt+=vertical       " diff mode with vertical splits please
 
 " ----------------------------------------------------------------------------
 "  mapping
@@ -276,8 +281,8 @@ set diffopt+=vertical     " diff mode with vertical splits please
 " ----------------------------------------------------------------------------
 "  reading and writing files
 " ----------------------------------------------------------------------------
-set autoread			    " Automatically re-read files changed outside
-                      " of Vim
+set autoread			          " Automatically re-read files changed outside
+                            " of Vim
 
 " ----------------------------------------------------------------------------
 "  the swap file
@@ -354,7 +359,7 @@ set encoding=utf-8
 " ----------------------------------------------------------------------------
 "  various
 " ----------------------------------------------------------------------------
-set gdefault                    " For :substitute, use the /g flag by default
+set gdefault              " For :substitute, use the /g flag by default
 
 " ----------------------------------------------------------------------------
 " Autocmds
