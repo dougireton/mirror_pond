@@ -347,6 +347,10 @@ endif
 "  running make and jumping to errors
 " ----------------------------------------------------------------------------
 
+if executable('grep')
+  set grepprg=grep\ --line-number\ -rIH\ --exclude-dir=tmp\ --exclude-dir=.git\ --exclude=tags\ $*\ /dev/null
+endif
+
 " ----------------------------------------------------------------------------
 "  language specific
 " ----------------------------------------------------------------------------
