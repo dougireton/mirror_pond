@@ -31,6 +31,10 @@ if executable('ack')
   Bundle 'mileszs/ack.vim'
 endif
 
+if executable('ag')
+  Bundle 'rking/ag.vim'
+endif
+
 Bundle 'mhinz/vim-startify'
 Bundle 'chrisbra/Recover.vim'
 
