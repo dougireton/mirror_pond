@@ -1,0 +1,12 @@
+*ireton.txt*	          For Vim version 7.3          Last change: 2013 Aug 21
+
+Author:  Doug Ireton <http://dougireton.com>
+License: Same terms as Vim itself (see |license|)
+
+CONTENTS                                          *ireton-contents*
+
+  1. Intro
+
+
+===============================================================================
+vim:ft=help:tw=78:et:ts=2:sw=2:sts=2:norl
