@@ -47,6 +47,9 @@ endif
 " Buffer plugins
 Bundle 'bufkill.vim'
 
+" Status bar plugins
+Bundle 'bling/vim-airline'
+
 " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'endel/vim-github-colorscheme'
@@ -214,7 +217,7 @@ set showcmd			    " In the status bar, show incomplete commands
                     " as they are typed
 
 set noshowmode      " don't display the current mode (Insert, Visual, Replace)
-                    " in the status line. This info is already shown in the 
+                    " in the status line. This info is already shown in the
                     " Powerline status bar.
 
 set ruler			      " Always display the current cursor position in
@@ -260,7 +263,7 @@ set tabstop=2             " tab = 2 spaces
 set shiftwidth=2          " autoindent indents 2 spaces
 set smarttab              " <TAB> in front of line inserts 'shiftwidth' blanks
 set softtabstop=2
-set shiftround            " round to 'shiftwidth' for "<<" and ">>" 
+set shiftround            " round to 'shiftwidth' for "<<" and ">>"
 set expandtab
 
 " ----------------------------------------------------------------------------
@@ -341,8 +344,7 @@ if has("win32") || has("gui_win32")
     set shell=PowerShell
     set shellcmdflag=-ExecutionPolicy\ RemoteSigned\ -Command
     set shellquote=\"
-    " TODO: shellxquote must be a literal space character.
-    " Fix my trim trailing whitespace command to not run automatically on save
+    " shellxquote must be a literal space character.
     set shellxquote= 
   endif
 endif
