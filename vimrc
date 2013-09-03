@@ -45,7 +45,7 @@ if executable('tmux')
 endif
 
 " Buffer plugins
-Bundle 'bufkill.vim'
+Bundle 'moll/vim-bbye'
 
 " Status bar plugins
 Bundle 'bling/vim-airline'
