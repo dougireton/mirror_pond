@@ -58,6 +58,9 @@ nnoremap <unique> <silent> <leader>dw :call Preserve("%s/\\s\\+$//e")<CR>
 " Reindent entire file
 nnoremap <unique> <silent> <leader>e :call Preserve("normal gg=G")<CR>
 
+" Quickly switch to alternate file
+nnoremap <unique> <leader>a <C-^>
+
 " Mirrors and reversals
 nno  <silent> <Leader>fr   :set lz<cr>'aO<esc>ma'':'a+1,.g/^/m 'a<cr>kdd:set lz!<cr>
 vno  <silent> <Leader>fr   :<c-u>set lz<CR>O<esc>V'>:g/^/m '<<cr>'<dd:set lz!<cr>
