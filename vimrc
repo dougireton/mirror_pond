@@ -105,8 +105,8 @@ runtime! ftplugin/man.vim
 set nostartofline     " keep cursor in same column for long-range motion cmds
 set incsearch			    " Highlight pattern matches as you type
 set ignorecase			  " ignore case when using a search pattern
-set smartcase			    " override 'ignorecase' when pattern
-                      " has upper case character
+set smartcase			    " override 'ignorecase' when pattern has upper case
+                      " character
 
 " ----------------------------------------------------------------------------
 "  tags
@@ -115,15 +115,12 @@ set smartcase			    " override 'ignorecase' when pattern
 " ----------------------------------------------------------------------------
 "  displaying text
 " ----------------------------------------------------------------------------
-set scrolloff=3       " number of screen lines to show around
-" the cursor
+set scrolloff=3       " number of screen lines to show around the cursor
 
-set linebreak			    " For lines longer than the window,
-                      " wrap intelligently. This doesn't
-                      " insert hard line breaks.
+set linebreak			    " For lines longer than the window, wrap intelligently.
+                      " This doesn't insert hard line breaks.
 
-set showbreak=↪\ \ 		" string to put before wrapped screen
-" lines
+set showbreak=↪\ \ 		" string to put before wrapped screen lines
 
 set sidescrolloff=2		" min # of columns to keep left/right of cursor
 set display+=lastline " show last line, even if it doesn't fit in the window
@@ -159,8 +156,7 @@ endif
 set laststatus=2  	  " Show a status line, even if there's only one
                       " Vim window
 
-set hidden		    	  " allow switching away from current buffer w/o
-                      " writing
+set hidden		    	  " allow switching away from current buffer w/o writing
 
 set switchbuf=usetab  " Jump to the 1st open window which contains
                       " specified buffer, even if the buffer is in
@@ -319,8 +315,8 @@ endif
 " ----------------------------------------------------------------------------
 "  command line editing
 " ----------------------------------------------------------------------------
-set history=200 		" Save more commands in history
-                    " See Practical Vim, by Drew Neil, pg 68
+set history=200    " Save more commands in history
+                   " See Practical Vim, by Drew Neil, pg 68
 
 set wildmode=list:longest,full
 
