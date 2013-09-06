@@ -2,6 +2,9 @@
 setlocal expandtab
 setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
+" Don't automatically comment the next/previous line after hitting 'o' or 'O'
+setlocal formatoptions-=o
+
 " highlight ruby whitespace errors
 let ruby_space_errors = 1
 let g:rubycomplete_buffer_loading = 1
