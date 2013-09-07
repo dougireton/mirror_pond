@@ -8,5 +8,11 @@ CONTENTS                                          *ireton-contents*
   1. Intro
 
 
+INTRODUCTION                                      *ireton-introduction*
+
+
+MAPPINGS                                          
+
+
 ===============================================================================
 vim:ft=help:tw=78:et:ts=2:sw=2:sts=2:norl
