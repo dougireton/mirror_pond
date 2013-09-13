@@ -28,3 +28,10 @@ let b:surround_61 = "<%= \r %>"   " =
 " specified source file with an appropriate executable, parse any errors, and
 " jump to the corresponding error location if required.
 compiler ruby
+
+" From https://github.com/bbatsov/ruby-style-guide#comment-annotations
+inoreabbrev <buffer> todo TODO:
+inoreabbrev <buffer> fixme FIXME:
+inoreabbrev <buffer> optimize OPTIMIZE:
+inoreabbrev <buffer> hack HACK:
+inoreabbrev <buffer> review REVIEW:
