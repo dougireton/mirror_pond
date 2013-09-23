@@ -56,7 +56,7 @@ cnoremap <unique> <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap <unique> <silent> <leader>dw :call Preserve("%s/\\s\\+$//e")<CR>
 
 " Reindent entire file
-nnoremap <unique> <silent> <leader>e :call Preserve("normal gg=G")<CR>
+nnoremap <unique> <silent> <leader>e :call Preserve("normal! gg=G")<CR>
 
 " Quickly switch to alternate file
 nnoremap <unique> <leader>a <C-^>
