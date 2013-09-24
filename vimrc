@@ -27,6 +27,9 @@ Bundle 'tpope/vim-commentary'
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
 
+" Shell/OS integration plugins
+Bundle 'tpope/vim-dispatch'
+
 if executable('ack')
   Bundle 'mileszs/ack.vim'
 endif
