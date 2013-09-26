@@ -1,14 +1,12 @@
-Vimfiles
-========
-
-Vim files for OSX and Windows
+# Mirror Pond
+An opinionated Vim distribution for Ruby and Chef development 
 
 
 ## First time install for Mac OS X
 1. Clone this repository:
 
     ```
-    $ git clone https://github.com/dougireton/vimfiles.git ~/.vim
+    $ git clone https://github.com/dougireton/mirror_pond.git ~/.vim
     ````
 
 2. Create symlinks to .vimrc and .gvimrc:
@@ -31,5 +29,5 @@ Vim files for OSX and Windows
 
 5. Install configured bundles:
 
-    Launch `mvim`, run `:BundleInstall` 
-    (or `mvim +BundleInstall +qall` for CLI lovers)
+    Launch `vim`, run `:BundleInstall` 
+    (or `vim +BundleInstall +qall` for CLI lovers)
