@@ -1,13 +1,15 @@
 " from http://vimcasts.org/episodes/tidying-whitespace/
 function! Preserve(command)
   " Preparation: save last search, and cursor position.
-  let save_cursor = getpos('.')
-  let last_search = getreg('/')
-  " Do the business:
-  execute a:command
+  let l:win_view = winsaveview()
+  let l:last_search = getreg('/')
+
+  " execute the command without adding to the changelist/jumplist:
+  execute 'keepjumps ' . a:command
+
   " Clean up: restore previous search history, and cursor position
-  call setpos('.', save_cursor)
-  call setreg('/', last_search)
+  call winrestview(l:win_view)
+  call setreg('/', l:last_search)
 endfunction
 
 " Convenient command to see the difference between the current buffer and the

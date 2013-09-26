@@ -56,7 +56,7 @@ cnoremap <unique> <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 nnoremap <unique> <silent> <leader>dw :call Preserve("%s/\\s\\+$//e")<CR>
 
 " Reindent entire file
-nnoremap <unique> <silent> <leader>e :call Preserve("normal gg=G")<CR>
+nnoremap <unique> <silent> <leader>e :call Preserve("normal! gg=G")<CR>
 
 " Quickly switch to alternate file
 nnoremap <unique> <leader>a <C-^>
@@ -70,7 +70,7 @@ if has("unix")
 endif
 
 " Mirrors and reversals
-nno  <silent> <Leader>fr   :set lz<cr>'aO<esc>ma'':'a+1,.g/^/m 'a<cr>kdd:set lz!<cr>
-vno  <silent> <Leader>fr   :<c-u>set lz<CR>O<esc>V'>:g/^/m '<<cr>'<dd:set lz!<cr>
-nmap <silent> <Leader>fR   V'a\fR
-vno  <silent> <Leader>fR   c<C-O>:set ri lz<cr><C-R>"<esc>:norm! dd`<<cr>:set ri! lz!<cr>
+nno  <silent> <leader>fr   :set lz<cr>'aO<esc>ma'':'a+1,.g/^/m 'a<cr>kdd:set lz!<cr>
+vno  <silent> <leader>fr   :<c-u>set lz<CR>O<esc>V'>:g/^/m '<<cr>'<dd:set lz!<cr>
+nmap <silent> <leader>fR   V'a\fR
+vno  <silent> <leader>fR   c<C-O>:set ri lz<cr><C-R>"<esc>:norm! dd`<<cr>:set ri! lz!<cr>

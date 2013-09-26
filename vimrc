@@ -27,6 +27,9 @@ Bundle 'tpope/vim-commentary'
 " File managers/explorers
 Bundle 'kien/ctrlp.vim'
 
+" Shell/OS integration plugins
+Bundle 'tpope/vim-dispatch'
+
 if executable('ack')
   Bundle 'mileszs/ack.vim'
 endif
@@ -226,10 +229,7 @@ set confirm         " Ask to save buffer instead of failing when executing
 "  selecting text
 " ----------------------------------------------------------------------------
 
-" See http://stackoverflow.com/questions/11404800/fix-vim-tmux-yank-paste-on-unnamed-register
-if $TMUX == ""
-  set clipboard=unnamed	" Yank to the system clipboard by default
-endif
+set clipboard=unnamed	" Yank to the system clipboard by default
 
 " ----------------------------------------------------------------------------
 "  editing text
