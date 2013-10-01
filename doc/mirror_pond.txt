@@ -1,17 +1,56 @@
-*ireton.txt*	          For Vim version 7.3          Last change: 2013 Aug 21
+*mirror_pond.txt*	        For Vim version 7.3          Last change: 2013 Aug 21
 
 Author:  Doug Ireton <http://dougireton.com>
-License: Same terms as Vim itself (see |license|)
+License: Apache 2.0
 
-CONTENTS                                          *ireton-contents*
+CONTENTS                                          *mirror_pond-contents*
 
   1. Intro
 
 
-INTRODUCTION                                      *ireton-introduction*
+INTRODUCTION                                      *mirror_pond*
+
+mirror_pond is an opinionated Vim distribution tailored for Ruby and Chef
+development.
+
+MAPPINGS                                          *mirror_pond-mappings*
 
 
-MAPPINGS                                          
+kj                      Exit to Normal mode
+
+Y                       Yank from cursor pos to EOL
+
+[count]<C-h>            In Normal mode, move cursor left [count] windows. With
+                        no count, moves one window.
+
+[count]<C-j>            In Normal mode, move cursor down [count] windows. With
+                        no count, moves one window.
+
+[count]<C-k>            In Normal mode, move cursor up [count] windows. With
+                        no count, moves one window.
+
+[count]<C-l>            In Normal mode, move cursor right [count] windows. With
+                        no count, moves one window.
+
+<C-p>
+<C-n>                   Use ^p and ^n to navigate and filter command-line history
+
+&                       Repeat the last :substitute command and preserve flags
+
+'                       jump to mark's line/col position
+
+%%                      paste fully-qualified path of current file into the
+                        command window
+
+<leader>dw              Delete trailing whitespace in buffer
+
+<leader>e               Re-indent entire buffer
+
+<leader>a               Switch to alternate file. See |CTRL-^| for more
+                        details.
+
+w!!                     Write current file using sudo. *nix systems only.
+
 
 
 ===============================================================================
