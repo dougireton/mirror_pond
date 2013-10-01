@@ -3,22 +3,32 @@
 Author:  Doug Ireton <http://dougireton.com>
 License: Apache 2.0
 
+===============================================================================
 CONTENTS                                          *mirror_pond-contents*
 
-  1. Intro
+  1. Introduction                                |mirror_pond|
+  2. Mappings                                    |mirror_pond-mappings|
+  3.
 
 
+===============================================================================
 INTRODUCTION                                      *mirror_pond*
 
 mirror_pond is an opinionated Vim distribution tailored for Ruby and Chef
 development.
 
+
+===============================================================================
 MAPPINGS                                          *mirror_pond-mappings*
 
-
+Insert Mode:~
+------------
 kj                      Exit to Normal mode
 
-Y                       Yank from cursor pos to EOL
+
+Normal Mode:~
+------------
+Y                       Yank from cursor pos to EOL.
 
 [count]<C-h>            In Normal mode, move cursor left [count] windows. With
                         no count, moves one window.
@@ -32,22 +42,27 @@ Y                       Yank from cursor pos to EOL
 [count]<C-l>            In Normal mode, move cursor right [count] windows. With
                         no count, moves one window.
 
-<C-p>
-<C-n>                   Use ^p and ^n to navigate and filter command-line history
-
 &                       Repeat the last :substitute command and preserve flags
 
-'                       jump to mark's line/col position
-
-%%                      paste fully-qualified path of current file into the
-                        command window
+'                       jump to mark's line/col position, instead of just the
+                        beginning of the line.
 
 <leader>dw              Delete trailing whitespace in buffer
 
 <leader>e               Re-indent entire buffer
 
-<leader>a               Switch to alternate file. See |CTRL-^| for more
+<leader>a               Switch to alternate file. See CTRL-^ for more
                         details.
+
+
+Command Mode:~
+------------
+<C-p>
+<C-n>                   Use ^p and ^n to navigate and filter command-line
+                        history
+
+%%                      paste fully-qualified path of current file into the
+                        command window
 
 w!!                     Write current file using sudo. *nix systems only.
 
