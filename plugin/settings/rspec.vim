@@ -5,6 +5,6 @@ nnoremap <unique> <leader>rl :call RunLastSpec()<CR>
 nnoremap <unique> <leader>ra :call RunAllSpecs()<CR>
 
 " Run rspec tests via Tim Pope's Dispatch plugin if it's loaded
-if g:loaded_dispatch
+if exists("g:loaded_dispatch")
   let g:rspec_command = "Dispatch rspec {spec}"
 endif

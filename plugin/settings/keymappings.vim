@@ -20,7 +20,7 @@ nnoremap <unique> Y y$
 " http://vimcasts.org/episodes/bubbling-text/
 nnoremap <unique> gV `[v`]
 
-if !g:loaded_tmux_navigator
+if !exists("g:loaded_tmux_navigator")
   " Make it easier to switch between windows
   " From here: http://vimcasts.org/episodes/working-with-windows/
   map <unique> <C-h> <C-w>h
