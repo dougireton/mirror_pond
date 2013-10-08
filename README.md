@@ -5,7 +5,7 @@ An opinionated Vim distribution for Ruby and Chef development.
 ### First time install for Mac OS X or Linux
 1. Clone this repository:
 
-    ``sh
+    ```sh
     $ git clone https://github.com/dougireton/mirror_pond.git ~/.vim
     ```
 
