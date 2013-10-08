@@ -8,24 +8,28 @@ An opinionated Vim distribution for Ruby and Chef development.
     ``sh
     $ git clone https://github.com/dougireton/mirror_pond.git ~/.vim
     ```
+
 2. Chmod the install.sh script:
 
     ```sh
     $ chmod u+x ~/.vim/install.sh
     ```
+
 3. Run the install.sh script
 
     ```sh
     $ ~/.vim/install.sh
     ```
+
 4. Now you are ready to run Vim.
 
 ### First time install for Windows
 1. Clone this repository:
 
     ```bat
-    c:\> git clone https://github.com/dougireton/mirror_pond.git ~/.vim
+    c:\> git clone https://github.com/dougireton/mirror_pond.git $HOME\.vim
     ```
+
 2. If you are using Vim < 7.4, you will need to create symlinks
    to .vimrc and .gvimrc:
 
