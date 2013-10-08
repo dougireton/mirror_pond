@@ -16,7 +16,7 @@ if (( $( bc <<< "$vim_version < 7.4" ) )); then
   ln -s ~/.vim/gvimrc ~/.gvimrc
 fi
 
-mkdir ~/$vim_dir/bundle
-git clone https://github.com/gmarik/vundle.git ~/$vim_dir/bundle/vundle
+mkdir $vim_dir/bundle
+git clone https://github.com/gmarik/vundle.git $vim_dir/bundle/vundle
 vim +BundleInstall +qall
 echo Thank you for installing Mirror Pond!
