@@ -19,7 +19,7 @@ development.
 
 
 ===============================================================================
-MAPPINGS                                          *mirror_pond-mappings*
+BASIC MAPPINGS                                    *mirror_pond-basic-mappings*
 
 Insert Mode:~
 ------------
@@ -65,6 +65,18 @@ Command Mode:~
                         command window
 
 w!!                     Write current file using sudo. *nix systems only.
+
+==============================================================================
+FUGITIVE MAPPINGS                            *mirror_pond-fugitive-mappings*
+
+Normal Mode:~
+------------
+<leader>gs              :Gstatus
+<leader>gc              :Gcommit
+<leader>gl              :Glog
+<leader>gw              :Gwrite
+<leader>gd              :Gdiff
+
 
 
 
