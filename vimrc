@@ -73,10 +73,11 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'endel/vim-github-colorscheme'
 
 " Ruby plugins
-Bundle 'vim-ruby/vim-ruby'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-bundler'
-Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'tpope/vim-rake'
+Bundle 'vim-ruby/vim-ruby'
 
 " JSON plugins
 Bundle 'elzr/vim-json'
