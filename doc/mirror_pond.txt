@@ -77,8 +77,60 @@ Normal Mode:~
 <leader>gw              :Gwrite
 <leader>gd              :Gdiff
 
+==============================================================================
+TABULAR MAPPINGS                                 *mirror_pond-tabular-mappings*
 
+Normal and Visual Mode:~
+-----------------------
+The following mappings are defined for both Normal and Visual modes.
 
+<Leader>a=              Align contiguous lines on first '='
+<Leader>a:              Align contiguous lines on first ':'
+<Leader>a>              Align contiguous lines on '=>' (Ruby's hash rocket)
+<Leader>a,              Align contiguous lines on first ','
+
+==============================================================================
+NETRW MAPPINGS                                     *mirror_pond-netrw-mappings*
+
+Normal Mode:~
+------------
+<leader>d               NetrwReturn: return to Netrw window
+
+==============================================================================
+CTRL-P MAPPINGS                                    *mirror_pond-ctrlp-mappings*
+
+Normal Mode:~
+------------
+<leader>cb              Launch Ctrl-P in buffer mode
+<leader>cm              Launch Ctrl-P in Most-Recently Used mode
+
+==============================================================================
+RSPEC MAPPINGS                                     *mirror_pond-rspec-mappings*
+
+Normal Mode:~
+------------
+<leader>rf              Run all specs in the current file
+<leader>rs              Run nearest spec
+<leader>rl              Run last-run spec
+<leader>ra              Run all specs
+
+==============================================================================
+FILETYPE: GITREBASE MAPPINGS                   *mirror_pond-gitrebase-mappings*
+
+Normal Mode:~
+------------
+P                       Pick
+S                       Squash
+E                       Edit
+R                       Reword
+F                       Fixup
+
+==============================================================================
+FILETYPE: RUBY MAPPINGS                             *mirror_pond-ruby-mappings*
+
+Insert Mode:~
+------------
+<C-l>                   Insert ' => ' (Ruby hashrocket)
 
 ===============================================================================
 vim:ft=help:tw=78:et:ts=2:sw=2:sts=2:norl
