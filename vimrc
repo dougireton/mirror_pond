@@ -161,8 +161,10 @@ set number			      " show line numbers
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-colorscheme solarized
 set background=dark
+
+" ignore colorscheme doesn't exist error if solarized isn't installed
+silent! colorscheme solarized
 
 if exists('+colorcolumn')
   set colorcolumn=80    " display a line in column 80 to show you
