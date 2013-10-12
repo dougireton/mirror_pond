@@ -1,8 +1,8 @@
 #!/bin/sh
-
 set -e
 
-vim_dir="~/.vim"
+vim_dir="$HOME/.vim"
+
 if [ ! -d "$vim_dir" ]; then
   echo Please git clone mirror_pond to $vim_dir and try again.
   exit 1
