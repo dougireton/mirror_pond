@@ -12,8 +12,8 @@ fi
 # symlinks for Vim < 7.4
 vim_version=$(vim --version | grep -o 'Vi IMproved \d\.\d' | cut -d ' ' -f 3)
 if (( $( bc <<< "$vim_version < 7.4" ) )); then
-  ln -s ~/.vim/vimrc ~/.vimrc
-  ln -s ~/.vim/gvimrc ~/.gvimrc
+  ln -s $vim_dir/vimrc ~/.vimrc
+  ln -s $vim_dir/gvimrc ~/.gvimrc
 fi
 
 mkdir $vim_dir/bundle
