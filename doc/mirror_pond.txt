@@ -30,38 +30,48 @@ Y                       Yank from cursor pos to EOL.
 [count]<C-h>            In Normal mode, move cursor left [count] windows. With
                         no count, moves one window.
 
+                                                    *mirror_pond-<C-j>*
 [count]<C-j>            In Normal mode, move cursor down [count] windows. With
                         no count, moves one window.
 
+                                                    *mirror_pond-<C-k>*
 [count]<C-k>            In Normal mode, move cursor up [count] windows. With
                         no count, moves one window.
 
+                                                    *mirror_pond-<C-l>*
 [count]<C-l>            In Normal mode, move cursor right [count] windows. With
                         no count, moves one window.
 
+                                                    *mirror_pond-&*
 &                       Repeat the last :substitute command and preserve flags
 
+                                                    *mirror_pond-'*
 '                       jump to mark's line/col position, instead of just the
                         beginning of the line.
 
+                                                    *mirror_pond-<leader>dw*
 <leader>dw              Delete trailing whitespace in buffer
 
+                                                    *mirror_pond-<leader>e*
 <leader>e               Re-indent entire buffer
 
+                                                    *mirror_pond-<leader>a*
 <leader>a               Switch to alternate file. See CTRL-^ for more
                         details.
 
 
-Command Mode:~
-------------
+                                                    *mirror_pond-c_<C-p>,c_<C-n>*
 <C-p>
-<C-n>                   Use ^p and ^n to navigate and filter command-line
-                        history
+<C-n>                   In command mode, use ^p and ^n to navigate and filter
+                        command-line history
 
-%%                      paste fully-qualified path of current file into the
-                        command window
+                                                      *mirror_pond-c_%%*
+  %%                      In command mode, paste fully-qualified path of current
+                        %file into the command window
 
-w!!                     Write current file using sudo. *nix systems only.
+                                                      *mirror_pond-c_w!!*
+w!!                     In command mode, Write current file using sudo. *nix
+                        systems only.
 
 ==============================================================================
 FUGITIVE MAPPINGS                            *mirror_pond-fugitive-mappings*
