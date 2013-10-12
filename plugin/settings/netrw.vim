@@ -12,7 +12,7 @@ let g:netrw_liststyle = 3
 
 " define shortcut to return to netrw window
 let g:netrw_retmap = 1
-nmap <silent> <leader>d <Plug>NetrwReturn
+nmap <unique> <silent> <leader>d <Plug>NetrwReturn
 
 " vpslit when previewing files
 let g:netrw_preview = 1
