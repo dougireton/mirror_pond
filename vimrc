@@ -233,7 +233,7 @@ set showcmd			    " In the status bar, show incomplete commands
 
 set noshowmode      " don't display the current mode (Insert, Visual, Replace)
                     " in the status line. This info is already shown in the
-                    " Powerline status bar.
+                    " Airline status bar.
 
 set ruler			      " Always display the current cursor position in
                     " the Status Bar
@@ -248,7 +248,7 @@ set confirm         " Ask to save buffer instead of failing when executing
 set clipboard=unnamed	" Yank to the system clipboard by default
 
 " ----------------------------------------------------------------------------
-"  editing text			" TODO: look at these options
+"  editing text
 " ----------------------------------------------------------------------------
 set backspace=indent,eol,start  "backspace over everything
 
@@ -282,16 +282,15 @@ set expandtab
 "  folding
 " ----------------------------------------------------------------------------
 if has('folding')
-  set nofoldenable 		    " When opening files, all folds open by default
+  set nofoldenable 		       " When opening files, all folds open by default
 endif
 
-set foldtext=NeatFoldText()
+set foldtext=NeatFoldText()  "Use a custom foldtext function
 
 " ----------------------------------------------------------------------------
 "  diff mode
 " ----------------------------------------------------------------------------
 set diffopt+=vertical       " start diff mode with vertical splits by default
-set diffopt+=vertical       " diff mode with vertical splits please
 
 " ----------------------------------------------------------------------------
 "  mapping

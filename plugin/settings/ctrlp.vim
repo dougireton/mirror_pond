@@ -1,5 +1,4 @@
 " keymappings for Ctrl-P
-nnoremap <leader>cf :CtrlP<cr>
 nnoremap <leader>cb :CtrlPBuffer<cr>
 nnoremap <leader>cm :CtrlPMRU<cr>
 

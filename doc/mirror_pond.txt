@@ -1,0 +1,153 @@
+*mirror_pond.txt*	        For Vim version 7.3          Last change: 2013 Aug 21
+
+Author:  Doug Ireton <http://dougireton.com>
+License: Apache 2.0
+
+===============================================================================
+CONTENTS                                          *mirror_pond-contents*
+
+  1. Introduction                                |mirror_pond|
+  2. Mappings                                    |mirror_pond-mappings|
+
+
+===============================================================================
+1. Introduction                                      *mirror_pond*
+
+mirror_pond is an opinionated Vim distribution tailored for Ruby and Chef
+development.
+
+
+===============================================================================
+2. Basic Mappings                                   *mirror_pond-basic-mappings*
+
+                                                    *mirror_pond-i_kj*
+kj                      Exit to Normal mode
+
+                                                    *mirror_pond-Y*
+Y                       Yank from cursor pos to EOL.
+
+                                                    *mirror_pond-<C-h>*
+[count]<C-h>            In Normal mode, move cursor left [count] windows. With
+                        no count, moves one window.
+
+                                                    *mirror_pond-<C-j>*
+[count]<C-j>            In Normal mode, move cursor down [count] windows. With
+                        no count, moves one window.
+
+                                                    *mirror_pond-<C-k>*
+[count]<C-k>            In Normal mode, move cursor up [count] windows. With
+                        no count, moves one window.
+
+                                                    *mirror_pond-<C-l>*
+[count]<C-l>            In Normal mode, move cursor right [count] windows. With
+                        no count, moves one window.
+
+                                                    *mirror_pond-&*
+&                       Repeat the last :substitute command and preserve flags
+
+                                                    *mirror_pond-'*
+'                       jump to mark's line/col position, instead of just the
+                        beginning of the line.
+
+                                                    *mirror_pond-<leader>dw*
+<leader>dw              Delete trailing whitespace in buffer
+
+                                                    *mirror_pond-<leader>e*
+<leader>e               Re-indent entire buffer
+
+                                                    *mirror_pond-<leader>a*
+<leader>a               Switch to alternate file. See CTRL-^ for more
+                        details.
+
+
+                                                    *mirror_pond-c_<C-p>,c_<C-n>*
+<C-p>
+<C-n>                   In command mode, use ^p and ^n to navigate and filter
+                        command-line history
+
+                                                      *mirror_pond-c_%%*
+  %%                      In command mode, paste fully-qualified path of current
+                        %file into the command window
+
+                                                      *mirror_pond-c_w!!*
+w!!                     In command mode, Write current file using sudo. *nix
+                        systems only.
+
+==============================================================================
+FUGITIVE MAPPINGS                            *mirror_pond-fugitive-mappings*
+
+Normal Mode:~
+------------
+<leader>gs              :Gstatus
+<leader>gc              :Gcommit
+<leader>gl              :Glog
+<leader>gw              :Gwrite
+<leader>gd              :Gdiff
+
+==============================================================================
+TABULAR MAPPINGS                                 *mirror_pond-tabular-mappings*
+
+Normal and Visual Mode:~
+-----------------------
+The following mappings are defined for both Normal and Visual modes.
+
+<Leader>a=              Align contiguous lines on first '='
+<Leader>a:              Align contiguous lines on first ':'
+<Leader>a>              Align contiguous lines on '=>' (Ruby's hash rocket)
+<Leader>a,              Align contiguous lines on first ','
+
+==============================================================================
+NETRW MAPPINGS                                     *mirror_pond-netrw-mappings*
+
+Normal Mode:~
+------------
+<leader>d               NetrwReturn: return to Netrw window
+
+==============================================================================
+CTRL-P MAPPINGS                                    *mirror_pond-ctrlp-mappings*
+
+Normal Mode:~
+------------
+<leader>cb              Launch Ctrl-P in buffer mode
+<leader>cm              Launch Ctrl-P in Most-Recently Used mode
+
+==============================================================================
+RSPEC MAPPINGS                                     *mirror_pond-rspec-mappings*
+
+Normal Mode:~
+------------
+<leader>rf              Run all specs in the current file
+<leader>rs              Run nearest spec
+<leader>rl              Run last-run spec
+<leader>ra              Run all specs
+
+
+==============================================================================
+FILETYPE PLUGIN MAPPINGS                        *mirror_pond-filetype-mappings*
+
+The following mappings are local to the filetype. For example the Ruby
+mappings are active only in Ruby files.
+
+==============================================================================
+GITREBASE MAPPINGS                             *mirror_pond-gitrebase-mappings*
+
+These mappings are defined for interactive git rebase and require the Fugitive
+plugin.
+
+Normal Mode:~
+------------
+P                       Pick
+S                       Squash
+E                       Edit
+R                       Reword
+F                       Fixup
+
+==============================================================================
+RUBY MAPPINGS                                       *mirror_pond-ruby-mappings*
+
+Insert Mode:~
+------------
+<C-l>                   Insert ' => ' (Ruby hashrocket)
+
+===============================================================================
+vim:ft=help:tw=78:et:ts=2:sw=2:sts=2:norl
