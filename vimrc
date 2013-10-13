@@ -388,9 +388,6 @@ set gdefault              " For :substitute, use the /g flag by default
 " Autocmds
 " ----------------------------------------------------------------------------
 
-" Make gf work on Chef include_recipe lines
-" Add all cookbooks/*/recipe dirs to Vim's path variable
-autocmd BufRead,BufNewFile */cookbooks/*/recipes/*.rb setlocal path+=recipes;/cookbooks/**1
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it for commit messages, when the position is invalid, or when
