@@ -1,6 +1,31 @@
 # Mirror Pond
 An opinionated Vim distribution for Ruby and Chef development.
 
+## Name
+Mirror Pond is named after my favorite beer - [Deschutes Mirror Pond Pale
+Ale](http://www.deschutesbrewery.com/brew/mirror-pond-pale-ale).
+
+It seemed appropriate to combine two of my favorite things - beer and Vim.
+
+## Features
+#### Chef
+1. `gf` on any `include_recipe` to jump to the included recipe.
+    You can even jump to the `default` recipe, e.g. `gf` on `include_recipe
+    'git'` will jump to the `default.rb` recipe in the `git` cookbook.
+
+2. If you have Foodcritic installed, Vim will display Foodcritic errors inline
+   via [Syntastic](https://github.com/scrooloose/syntastic).
+
+### Ruby
+1. If you have Rubocop installed, Vim will display Rubocop errors inline via
+   Syntastic.
+
+2. Surround variable with "#{ * }" using Tim Pope's Surround plugin.
+
+3. Surround text in Erb templates, "<% * -%>" and "<%= * %>"  using Tim Pope's Surround plugin.
+
+4. Insert Ruby hash rocket, `=>` via <C-l>.
+
 ## Installation
 ### First time install for Mac OS X or Linux
 1. Clone this repository:
