@@ -24,7 +24,7 @@ It seemed appropriate to combine two of my favorite things - beer and Vim.
 
 3. Surround text in Erb templates, "<% * -%>" and "<%= * %>"  using Tim Pope's Surround plugin.
 
-4. Insert Ruby hash rocket, `=>` via <C-l>.
+4. Insert Ruby hash rocket, `=>` via `<Ctrl-l>`.
 
 ## Installation
 ### First time install for Mac OS X or Linux
