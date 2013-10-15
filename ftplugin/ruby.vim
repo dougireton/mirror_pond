@@ -25,7 +25,7 @@ let g:rubycomplete_classes_in_global = 1
 let ruby_fold = 1
 
 " Gary Bernhardt's hashrocket
-inoremap <c-l> <space>=><space>
+inoremap <buffer> <c-l> <space>=><space>
 
 " Use v or # to get a variable interpolation (inside of a string)}
 " ysiw#   Wrap the token under the cursor in #{}
