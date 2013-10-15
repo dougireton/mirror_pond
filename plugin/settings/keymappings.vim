@@ -23,10 +23,10 @@ nnoremap <unique> gV `[v`]
 if !exists("g:loaded_tmux_navigator")
   " Make it easier to switch between windows
   " From here: http://vimcasts.org/episodes/working-with-windows/
-  map <unique> <C-h> <C-w>h
-  map <unique> <C-j> <C-w>j
-  map <unique> <C-k> <C-w>k
-  map <unique> <C-l> <C-w>l
+  nnoremap <unique> <C-h> <C-w>h
+  nnoremap <unique> <C-j> <C-w>j
+  nnoremap <unique> <C-k> <C-w>k
+  nnoremap <unique> <C-l> <C-w>l
 endif
 
 " Use ^p and ^n to navigate and filter command-line history
