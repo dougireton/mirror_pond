@@ -18,6 +18,9 @@ It seemed appropriate to combine two of my favorite things - beer and Vim.
 2. If you have [Foodcritic](http://acrmp.github.io/foodcritic/) installed, Vim
    will display Foodcritic errors inline via [Syntastic](https://github.com/scrooloose/syntastic).
 
+![Syntastic Foodcritic errors](_assets/syntastic_foodcritic.png "Syntastic
+Foodcritic errors")
+
 ### Ruby
 1. If you have [Rubocop](https://github.com/bbatsov/rubocop) installed, Vim will display Rubocop errors inline via
    Syntastic.
