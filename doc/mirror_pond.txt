@@ -1,4 +1,4 @@
-*mirror_pond.txt*	        For Vim version 7.3          Last change: 2013 Aug 21
+*mirror_pond.txt* An opinionated Vim distribution tailored for Ruby and Chef
 
 Author:  Doug Ireton <http://dougireton.com>
 License: Apache 2.0
