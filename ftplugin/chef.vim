@@ -13,6 +13,14 @@
 " See the License for the specific language governing permissions and
 " limitations under the License.
 
+if (exists('b:did_ftplugin'))
+  finish
+endif
+let b:did_ftplugin = 1
+
+let s:cpo_save = &cpo
+set cpo&vim
+
 " Handle these cases:
 " include_recipe 'current_cookbook::foo' => ./foo.rb
 " include_recipe "#{cookbook_name}::foo" => ./foo.rb
@@ -33,3 +41,9 @@ endif
 " make this case work:
 " include_recipe 'apache2' => apache2/recipes/default.rb
 setlocal suffixesadd+=/recipes/default.rb
+
+let &cpo = s:cpo_save
+unlet s:cpo_save
+
+" Vim will execute this to undo any options set in this ftplugin
+let b:undo_ftplugin = 'setlocal path< suffixesadd<'
