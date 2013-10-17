@@ -79,6 +79,9 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rake'
 Bundle 'vim-ruby/vim-ruby'
 
+" Chef plugins
+Bundle 'dougireton/vim-chef'
+
 " JSON plugins
 Bundle 'elzr/vim-json'
 
