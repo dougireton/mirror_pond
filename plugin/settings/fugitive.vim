@@ -1,6 +1,8 @@
 " Fugitive key mappings
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gc :Gcommit<cr>
-nnoremap <leader>gl :Glog
-nnoremap <leader>gw :Gwrite<cr>
-nnoremap <leader>gd :Gdiff
+nnoremap <unique> <leader>gs :Gstatus<cr>
+nnoremap <unique> <leader>gc :Gcommit<cr>
+nnoremap <unique> <leader>gl :Glog<cr>
+nnoremap <unique> <leader>gw :Gwrite<cr>
+nnoremap <unique> <leader>gd :Gdiff<cr>
+nnoremap <unique> <leader>gb :Git checkout -b 
+nnoremap <unique> <leader>gp :Git push 
