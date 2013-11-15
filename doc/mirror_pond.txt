@@ -50,8 +50,8 @@ Y                       Yank from cursor pos to EOL.
                         no count, moves one window.
 
                                                     *mirror_pond-quickfix*
-<leader>cc              In Normal mode, close the |quickfix-window|. 
-<leader>co              In Normal mode, open the |quickfix-window| if there
+<leader>qc              In Normal mode, close the |quickfix-window|. 
+<leader>qo              In Normal mode, open the |quickfix-window| if there
                         are errors.
 
                                                     *mirror_pond-&*
