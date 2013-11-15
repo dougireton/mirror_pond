@@ -7,8 +7,15 @@ License: Apache 2.0
 CONTENTS                                          *mirror_pond-contents*
 
   1. Introduction                                |mirror_pond|
-  2. Mappings                                    |mirror_pond-mappings|
-
+  2. Basic Mappings                              |mirror_pond-basic-mappings|
+  3. Fugitive Mappings                           |mirror_pond-fugitive-mappings|
+  4. Tabular Mappings                            |mirror_pond-tabular-mappings|
+  5. Netrw Mappings                              |mirror_pond-netrw-mappings|
+  6. Ctrl-P Mappings                             |mirror_pond-ctrlp-mappings|
+  7. RSpec Mappings                              |mirror_pond-rspec-mappings|
+  8. Filetype Plugin Mappings                    |mirror_pond-filetype-mappings|
+  9. Gitrebase Mappings                          |mirror_pond-gitrebase-mappings|
+ 10. Ruby Mappings                               |mirror_pond-ruby-mappings|
 
 ===============================================================================
 1. Introduction                                      *mirror_pond*
@@ -42,6 +49,11 @@ Y                       Yank from cursor pos to EOL.
 [count]<C-l>            In Normal mode, move cursor right [count] windows. With
                         no count, moves one window.
 
+                                                    *mirror_pond-quickfix*
+<leader>cc              In Normal mode, close the |quickfix-window|. 
+<leader>co              In Normal mode, open the |quickfix-window| if there
+                        are errors.
+
                                                     *mirror_pond-&*
 &                       Repeat the last :substitute command and preserve flags
 
@@ -66,7 +78,7 @@ Y                       Yank from cursor pos to EOL.
                         command-line history
 
                                                       *mirror_pond-c_%%*
-  %%                      In command mode, paste fully-qualified path of current
+%%                      In command mode, paste fully-qualified path of current
                         %file into the command window
 
                                                       *mirror_pond-c_w!!*

@@ -29,6 +29,10 @@ if !exists("g:loaded_tmux_navigator")
   nnoremap <unique> <C-l> <C-w>l
 endif
 
+" Open and close the quickfix list
+nnoremap <unique> <silent> <leader>qc :cclose<cr>
+nnoremap <unique> <silent> <leader>qo :cwindow<cr>
+
 " Use ^p and ^n to navigate and filter command-line history
 " From Practical Vim by Drew Neil, Tip 34
 cnoremap <unique> <C-p> <Up>
