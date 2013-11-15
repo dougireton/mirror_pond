@@ -26,7 +26,8 @@ if [ "$(uname)" == "Darwin" ]; then
   mkdir -p Vim/undo
 fi
 
+cd $vim_dir
 mkdir $vim_dir/bundle
 git clone https://github.com/gmarik/vundle.git $vim_dir/bundle/vundle
-vim +BundleInstall +qall
+vim -c BundleInstall! -c "helptags doc" -c qall
 echo Thank you for installing Mirror Pond!
