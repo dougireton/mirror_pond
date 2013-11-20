@@ -287,10 +287,9 @@ set expandtab
 "  folding
 " ----------------------------------------------------------------------------
 if has('folding')
-  set nofoldenable 		       " When opening files, all folds open by default
+  set nofoldenable 		         " When opening files, all folds open by default
+  set foldtext=NeatFoldText()  " Use a custom foldtext function
 endif
-
-set foldtext=NeatFoldText()  "Use a custom foldtext function
 
 " ----------------------------------------------------------------------------
 "  diff mode
