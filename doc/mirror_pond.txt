@@ -103,10 +103,10 @@ Normal and Visual Mode:~
 -----------------------
 The following mappings are defined for both Normal and Visual modes.
 
-<Leader>a=              Align contiguous lines on first '='
-<Leader>a:              Align contiguous lines on first ':'
-<Leader>a>              Align contiguous lines on '=>' (Ruby's hash rocket)
-<Leader>a,              Align contiguous lines on first ','
+<leader>a=              Align contiguous lines on first '='
+<leader>a:              Align contiguous lines on first ':'
+<leader>a>              Align contiguous lines on '=>' (Ruby's hash rocket)
+<leader>a,              Align contiguous lines on first ','
 
 ==============================================================================
 NETRW MAPPINGS                                     *mirror_pond-netrw-mappings*
