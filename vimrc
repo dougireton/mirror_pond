@@ -22,28 +22,29 @@ set rtp+=~/.vim/bundle/vundle/	" Add vundle to the RuntimePath
 call vundle#rc()
 
 " Let Vundle manage Vundle. Required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Various editing plugins
-Bundle 'kana/vim-textobj-user'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'ZoomWin'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-endwise'
-Bundle 'godlygeek/tabular'
-Bundle 'HarnoRanaivo/vim-neatfoldtext'
+Plugin 'kana/vim-textobj-user'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'ZoomWin'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-endwise'
+Plugin 'godlygeek/tabular'
+Plugin 'HarnoRanaivo/vim-neatfoldtext'
+Plugin 'dougireton/vim-qargs'
 
 " Comment plugin
-Bundle 'tpope/vim-commentary'
+Plugin 'tpope/vim-commentary'
 
 " File managers/explorers
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " Shell/OS integration plugins
-Bundle 'tpope/vim-dispatch'
+Plugin 'tpope/vim-dispatch'
 
 if executable('ack')
   Bundle 'mileszs/ack.vim'
@@ -53,8 +54,8 @@ if executable('ag')
   Bundle 'rking/ag.vim'
 endif
 
-Bundle 'mhinz/vim-startify'
-Bundle 'chrisbra/Recover.vim'
+Plugin 'mhinz/vim-startify'
+Plugin 'chrisbra/Recover.vim'
 
 " Tmux plugins
 if executable('tmux')
@@ -63,45 +64,45 @@ if executable('tmux')
 endif
 
 " Buffer plugins
-Bundle 'moll/vim-bbye'
+Plugin 'moll/vim-bbye'
 
 " Status bar plugins
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 
 " Colorschemes
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'endel/vim-github-colorscheme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'endel/vim-github-colorscheme'
 
 " Ruby plugins
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rake'
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rake'
+Plugin 'vim-ruby/vim-ruby'
 
 " Chef plugins
-Bundle 'dougireton/vim-chef'
+Plugin 'dougireton/vim-chef'
 
 " JSON plugins
-Bundle 'elzr/vim-json'
+Plugin 'elzr/vim-json'
 
 " Markdown plugins
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 
 " PowerShell plugins
-Bundle 'dougireton/vim-ps1'
+Plugin 'dougireton/vim-ps1'
 
 " Wiki
-Bundle 'vimwiki'
+Plugin 'vimwiki'
 
 " Syntax check on buffer save
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " Source Control plugins
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'gregsexton/gitv'
-Bundle 'mhinz/vim-signify'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'gregsexton/gitv'
+Plugin 'mhinz/vim-signify'
 
 
 if has('autocmd')
