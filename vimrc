@@ -1,4 +1,8 @@
+" vim:fdm=marker
 " vimrc
+" ----------------------------------------------------------------------------
+" License {{{1
+" ----------------------------------------------------------------------------
 " Copyright 2013 Doug Ireton
 
 " Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,8 +18,9 @@
 " limitations under the License.
 
 " ----------------------------------------------------------------------------
-"  Vundle setup
+"  Vim Package Manager {{{1
 " ----------------------------------------------------------------------------
+"  Setup {{{2
 filetype off 			" Required for Vundle
 
 set rtp+=~/.vim/bundle/vundle/	" Add vundle to the RuntimePath
@@ -24,7 +29,7 @@ call vundle#rc()
 " Let Vundle manage Vundle. Required!
 Plugin 'gmarik/vundle'
 
-" Various editing plugins
+" Various editing plugins {{{2
 Plugin 'kana/vim-textobj-user'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
@@ -37,13 +42,13 @@ Plugin 'godlygeek/tabular'
 Plugin 'HarnoRanaivo/vim-neatfoldtext'
 Plugin 'dougireton/vim-qargs'
 
-" Comment plugin
+" Comment plugin {{{2
 Plugin 'tpope/vim-commentary'
 
-" File managers/explorers
+" File managers/explorers {{{2
 Plugin 'kien/ctrlp.vim'
 
-" Shell/OS integration plugins
+" Shell/OS integration plugins {{{2
 Plugin 'tpope/vim-dispatch'
 
 if executable('ack')
@@ -57,54 +62,54 @@ endif
 Plugin 'mhinz/vim-startify'
 Plugin 'chrisbra/Recover.vim'
 
-" Tmux plugins
+" Tmux plugins {{{2
 if executable('tmux')
   Bundle 'christoomey/vim-tmux-navigator'
   Bundle 'sjl/vitality.vim'
 endif
 
-" Buffer plugins
+" Buffer plugins {{{2
 Plugin 'moll/vim-bbye'
 
-" Status bar plugins
+" Status bar plugins {{{2
 Plugin 'bling/vim-airline'
 
-" Colorschemes
+" Colorschemes {{{2
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'endel/vim-github-colorscheme'
 
-" Ruby plugins
+" Ruby plugins {{{2
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
 Plugin 'vim-ruby/vim-ruby'
 
-" Chef plugins
+" Chef plugins {{{2
 Plugin 'dougireton/vim-chef'
 
-" JSON plugins
+" JSON plugins {{{2
 Plugin 'elzr/vim-json'
 
-" Markdown plugins
+" Markdown plugins {{{2
 Plugin 'tpope/vim-markdown'
 
-" PowerShell plugins
+" PowerShell plugins {{{2
 Plugin 'dougireton/vim-ps1'
 
-" Wiki
+" Wiki {{{2
 Plugin 'vimwiki'
 
-" Syntax check on buffer save
+" Syntax check on buffer save {{{2
 Plugin 'scrooloose/syntastic'
 
-" Source Control plugins
+" Source Control plugins {{{2
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'gregsexton/gitv'
 Plugin 'mhinz/vim-signify'
 
-
+" Filetype detection, plugins, indent, syntax {{{1
 if has('autocmd')
   filetype plugin indent on	  " Turn on Filetype detection, plugins, and
                               " indent
@@ -114,6 +119,7 @@ if has('syntax') && !exists('g:syntax_on')
   syntax enable			" Turn on syntax highlighting
 endif
 
+" Builtin Plugins {{{1
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
@@ -123,7 +129,7 @@ endif
 runtime! ftplugin/man.vim
 
 " ----------------------------------------------------------------------------
-"  moving around, searching and patterns
+"  Moving around, searching and patterns {{{1
 " ----------------------------------------------------------------------------
 set nostartofline     " keep cursor in same column for long-range motion cmds
 set incsearch			    " Highlight pattern matches as you type
@@ -132,11 +138,11 @@ set smartcase			    " override 'ignorecase' when pattern has upper case
                       " character
 
 " ----------------------------------------------------------------------------
-"  tags
+"  Tags {{{1
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  displaying text
+"  Displaying text {{{1
 " ----------------------------------------------------------------------------
 set scrolloff=3       " number of screen lines to show around the cursor
 
@@ -163,7 +169,7 @@ endif
 set number			      " show line numbers
 
 " ----------------------------------------------------------------------------
-"  syntax, highlighting and spelling
+"  Syntax, highlighting and spelling {{{1
 " ----------------------------------------------------------------------------
 set background=dark
 
@@ -176,7 +182,7 @@ if exists('+colorcolumn')
 endif
 
 " ----------------------------------------------------------------------------
-"  multiple windows
+"  Multiple windows {{{1
 " ----------------------------------------------------------------------------
 set laststatus=2  	  " Show a status line, even if there's only one
                       " Vim window
@@ -209,31 +215,31 @@ set statusline+=%02.3c   	" cursor line/total lines
 set helpheight=30         " Set window height when opening Vim help windows
 
 " ----------------------------------------------------------------------------
-"  multiple tab pages
+"  Multiple tab pages {{{1
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  terminal
+"  Terminal {{{1
 " ----------------------------------------------------------------------------
 set ttyfast			      " this is the 21st century, people
 
 " ----------------------------------------------------------------------------
-"  using the mouse
+"  Using the mouse {{{1
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  GUI				      " Set these options in .gvimrc
+"  GUI {{{1			     
+"  Set these options in .gvimrc
 " See help for 'setting-guifont' for tips on how to set guifont on Mac vs Windows
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  printing
+"  Printing {{{1
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  messages and info
+"  Messages and info {{{1
 " ----------------------------------------------------------------------------
-
 set showcmd			    " In the status bar, show incomplete commands
                     " as they are typed
 
@@ -248,13 +254,13 @@ set confirm         " Ask to save buffer instead of failing when executing
                     " commands which close buffers
 
 " ----------------------------------------------------------------------------
-"  selecting text
+"  Selecting text {{{1
 " ----------------------------------------------------------------------------
 
 set clipboard=unnamed	" Yank to the system clipboard by default
 
 " ----------------------------------------------------------------------------
-"  editing text
+"  Editing text {{{1
 " ----------------------------------------------------------------------------
 set backspace=indent,eol,start  "backspace over everything
 
@@ -275,7 +281,7 @@ set nrformats-=octal      " don't treat numbers with leading zeros as octal
                           " when incrementing/decrementing
 
 " ----------------------------------------------------------------------------
-"  tabs and indenting
+"  Tabs and indenting {{{1
 " ----------------------------------------------------------------------------
 set tabstop=2             " tab = 2 spaces
 set shiftwidth=2          " autoindent indents 2 spaces
@@ -285,7 +291,7 @@ set shiftround            " round to 'shiftwidth' for "<<" and ">>"
 set expandtab
 
 " ----------------------------------------------------------------------------
-"  folding
+"  Folding {{{1
 " ----------------------------------------------------------------------------
 if has('folding')
   set nofoldenable 		         " When opening files, all folds open by default
@@ -293,22 +299,22 @@ if has('folding')
 endif
 
 " ----------------------------------------------------------------------------
-"  diff mode
+"  Diff mode {{{1
 " ----------------------------------------------------------------------------
 set diffopt+=vertical       " start diff mode with vertical splits by default
 
 " ----------------------------------------------------------------------------
-"  mapping
+"  Mapping {{{1
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  reading and writing files
+"  Reading and writing files {{{1
 " ----------------------------------------------------------------------------
 set autoread			          " Automatically re-read files changed outside
                             " of Vim
 
 " ----------------------------------------------------------------------------
-"  the swap file
+"  The swap file {{{1
 " ----------------------------------------------------------------------------
 
 " Set swap file, backup and undo directories to sensible locations
@@ -333,7 +339,7 @@ if exists('+undofile')
 endif
 
 " ----------------------------------------------------------------------------
-"  command line editing
+"  Command line editing {{{1
 " ----------------------------------------------------------------------------
 set history=200    " Save more commands in history
                    " See Practical Vim, by Drew Neil, pg 68
@@ -350,7 +356,7 @@ if exists('&wildignorecase')
 endif
 
 " ----------------------------------------------------------------------------
-"  executing external commands
+"  Executing external commands {{{1
 " ----------------------------------------------------------------------------
 
 if has("win32") || has("gui_win32")
@@ -366,7 +372,7 @@ if has("win32") || has("gui_win32")
 endif
 
 " ----------------------------------------------------------------------------
-"  running make and jumping to errors
+"  Running make and jumping to errors {{{1
 " ----------------------------------------------------------------------------
 
 if executable('grep')
@@ -374,21 +380,21 @@ if executable('grep')
 endif
 
 " ----------------------------------------------------------------------------
-"  language specific
+"  Language specific {{{1
 " ----------------------------------------------------------------------------
 
 " ----------------------------------------------------------------------------
-"  multi-byte characters
+"  Multi-byte characters {{{1
 " ----------------------------------------------------------------------------
 set encoding=utf-8
 
 " ----------------------------------------------------------------------------
-"  various
+"  Various {{{1
 " ----------------------------------------------------------------------------
 set gdefault              " For :substitute, use the /g flag by default
 
 " ----------------------------------------------------------------------------
-" Autocmds
+" Autocmds {{{1
 " ----------------------------------------------------------------------------
 
 
@@ -402,7 +408,7 @@ autocmd BufReadPost *
   \ endif
 
 " ----------------------------------------------------------------------------
-" Allow overriding these settings
+" Allow overriding these settings {{{1
 " ----------------------------------------------------------------------------
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
