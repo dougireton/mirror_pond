@@ -18,7 +18,7 @@
 " limitations under the License.
 
 " ----------------------------------------------------------------------------
-"  Vim Package Manager {{{1
+"  Vim package manager {{{1
 " ----------------------------------------------------------------------------
 "  Setup {{{2
 filetype off 			" Required for Vundle
@@ -41,6 +41,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'godlygeek/tabular'
 Plugin 'HarnoRanaivo/vim-neatfoldtext'
 Plugin 'dougireton/vim-qargs'
+Plugin 'justinmk/vim-sneak'
 
 " Comment plugin {{{2
 Plugin 'tpope/vim-commentary'
@@ -119,7 +120,7 @@ if has('syntax') && !exists('g:syntax_on')
   syntax enable			" Turn on syntax highlighting
 endif
 
-" Builtin Plugins {{{1
+" Builtin plugins {{{1
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
