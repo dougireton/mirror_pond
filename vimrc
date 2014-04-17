@@ -53,11 +53,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-dispatch'
 
 if executable('ack')
-  Bundle 'mileszs/ack.vim'
+  Plugin 'mileszs/ack.vim'
 endif
 
 if executable('ag')
-  Bundle 'rking/ag.vim'
+  Plugin 'rking/ag.vim'
 endif
 
 Plugin 'mhinz/vim-startify'
@@ -65,8 +65,8 @@ Plugin 'chrisbra/Recover.vim'
 
 " Tmux plugins {{{2
 if executable('tmux')
-  Bundle 'christoomey/vim-tmux-navigator'
-  Bundle 'sjl/vitality.vim'
+  Plugin 'christoomey/vim-tmux-navigator'
+  Plugin 'sjl/vitality.vim'
 endif
 
 " Buffer plugins {{{2
