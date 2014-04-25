@@ -348,7 +348,13 @@ set history=200    " Save more commands in history
 set wildmode=list:longest,full
 
 " File tab completion ignores these file patterns
-set wildignore+=*.exe,*.sw?,*.bak,.DS_Store,tags,*/Library/*
+" Mac files/dirs
+set wildignore+=.DS_Store,*/Library/*,*/Applications/*,*/Movies/*,*/Music/*,*/Pictures/*
+" ignore binary files
+set wildignore+=*.exe,*.png,*.jpg,*.gif,*.doc,*.mov,*.xls,*.msi
+" Vim files
+set wildignore+=*.sw?,*.bak,tags
+
 set wildmenu
 
 " Add guard around 'wildignorecase' to prevent terminal vim error
