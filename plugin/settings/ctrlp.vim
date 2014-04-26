@@ -3,6 +3,8 @@ let g:ctrlp_custom_ignore = {
       \ 'dir': '\.git$'
       \ }
 
+" show dotfiles and dotdirs
+let g:ctrlp_show_hidden = 1
 
 " keymappings for Ctrl-P
 nnoremap <leader>cb :CtrlPBuffer<cr>
