@@ -349,14 +349,23 @@ set wildmode=list:longest,full
 
 " File tab completion ignores these file patterns
 " Mac files/dirs
-if match(system('uname'), "Darwin") > 0
-  set wildignore+=.DS_Store,*/Library/*,*/Applications/*,*/Movies/*,*/Music/*,*/Pictures/*
+if match(system('uname'), "Darwin") > -1
+  set wildignore+=.CFUserTextEncoding,
+        \*/.Trash/*,
+        \*/Applications/*,
+        \*/Library/*,
+        \*/Movies/*,
+        \*/Music/*,
+        \*/Pictures/*,
+        \.DS_Store
 endif
 
 " ignore binary files
 set wildignore+=*.exe,*.png,*.jpg,*.gif,*.doc,*.mov,*.xls,*.msi
 " Vim files
 set wildignore+=*.sw?,*.bak,tags
+" Chef
+set wildignore+=*/.chef/checksums/*
 
 set wildmenu
 
