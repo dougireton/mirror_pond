@@ -10,6 +10,11 @@ endif
 " exit to Normal mode with 'kj'
 inoremap <unique> kj <ESC>
 
+" enable undo of i_CTRL-U and i_CTRL-W
+" http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
+inoremap <unique> <C-w> <C-g>u<C-w>
+inoremap <unique> <C-u> <C-g>u<C-u>
+
 " Make 'Y' yank from cursor pos to EOL. This
 " makes 'Y' consistent with 'D' which deletes
 " from cursor pos to EOL.
