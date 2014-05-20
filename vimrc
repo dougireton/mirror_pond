@@ -29,6 +29,9 @@ call vundle#rc()
 " Let Vundle manage Vundle. Required!
 Plugin 'gmarik/vundle'
 
+" Several tpope plugins depend on this
+Plugin 'tpope/vim-projectionist'
+
 " Various editing plugins {{{2
 Plugin 'kana/vim-textobj-user'
 Plugin 'tpope/vim-repeat'
