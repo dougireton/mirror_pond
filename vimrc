@@ -24,7 +24,7 @@
 filetype off 			" Required for Vundle
 
 set rtp+=~/.vim/bundle/vundle/	" Add vundle to the RuntimePath
-call vundle#rc()
+call vundle#begin()
 
 " Let Vundle manage Vundle. Required!
 Plugin 'gmarik/vundle'
@@ -113,6 +113,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'gregsexton/gitv'
 Plugin 'mhinz/vim-signify'
 
+call vundle#end()
 " Filetype detection, plugins, indent, syntax {{{1
 if has('autocmd')
   filetype plugin indent on	  " Turn on Filetype detection, plugins, and
