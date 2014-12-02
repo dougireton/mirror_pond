@@ -21,99 +21,107 @@
 "  Vim package manager {{{1
 " ----------------------------------------------------------------------------
 "  Setup {{{2
+
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
 filetype off 			" Required for Vundle
 
-set rtp+=~/.vim/bundle/vundle/	" Add vundle to the RuntimePath
-call vundle#begin()
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Let Vundle manage Vundle. Required!
-Plugin 'gmarik/vundle'
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Several tpope plugins depend on this
-Plugin 'tpope/vim-projectionist'
+NeoBundle 'tpope/vim-projectionist'
 
 " Various editing plugins {{{2
-Plugin 'kana/vim-textobj-user'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'ZoomWin'
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-endwise'
-Plugin 'godlygeek/tabular'
-Plugin 'HarnoRanaivo/vim-neatfoldtext'
-Plugin 'dougireton/vim-qargs'
-Plugin 'justinmk/vim-sneak'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'ZoomWin'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'HarnoRanaivo/vim-neatfoldtext'
+NeoBundle 'dougireton/vim-qargs'
+NeoBundle 'justinmk/vim-sneak'
 
 " Comment plugin {{{2
-Plugin 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-commentary'
 
 " File managers/explorers {{{2
-Plugin 'kien/ctrlp.vim'
+NeoBundle 'Shougo/unite.vim'
 
 " Shell/OS integration plugins {{{2
-Plugin 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-dispatch'
 
 if executable('ack')
-  Plugin 'mileszs/ack.vim'
+  NeoBundle 'mileszs/ack.vim'
 endif
 
 if executable('ag')
-  Plugin 'rking/ag.vim'
+  NeoBundle 'rking/ag.vim'
 endif
 
-Plugin 'mhinz/vim-startify'
-Plugin 'chrisbra/Recover.vim'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'chrisbra/Recover.vim'
 
 " Tmux plugins {{{2
 if executable('tmux')
-  Plugin 'christoomey/vim-tmux-navigator'
-  Plugin 'sjl/vitality.vim'
+  NeoBundle 'christoomey/vim-tmux-navigator'
+  NeoBundle 'sjl/vitality.vim'
 endif
 
 " Buffer plugins {{{2
-Plugin 'moll/vim-bbye'
+NeoBundle 'moll/vim-bbye'
 
 " Status bar plugins {{{2
-Plugin 'bling/vim-airline'
+NeoBundle 'bling/vim-airline'
 
 " Colorschemes {{{2
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'endel/vim-github-colorscheme'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'endel/vim-github-colorscheme'
 
 " Ruby plugins {{{2
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rake'
-Plugin 'vim-ruby/vim-ruby'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-rake'
+NeoBundle 'vim-ruby/vim-ruby'
 
 " Chef plugins {{{2
-Plugin 'dougireton/vim-chef'
+NeoBundle 'dougireton/vim-chef'
 
 " JSON plugins {{{2
-Plugin 'elzr/vim-json'
+NeoBundle 'elzr/vim-json'
 
 " Markdown plugins {{{2
-Plugin 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-markdown'
 
 " PowerShell plugins {{{2
-Plugin 'dougireton/vim-ps1'
+NeoBundle 'dougireton/vim-ps1'
 
 " Wiki {{{2
-Plugin 'vimwiki'
+NeoBundle 'vimwiki'
 
 " Syntax check on buffer save {{{2
-Plugin 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 
 " Source Control plugins {{{2
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-fugitive'
-Plugin 'gregsexton/gitv'
-Plugin 'mhinz/vim-signify'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv'
+NeoBundle 'mhinz/vim-signify'
 
-call vundle#end()
+call neobundle#end()
+
 " Filetype detection, plugins, indent, syntax {{{1
 if has('autocmd')
   filetype plugin indent on	  " Turn on Filetype detection, plugins, and
@@ -415,6 +423,10 @@ set encoding=utf-8
 "  Various {{{1
 " ----------------------------------------------------------------------------
 set gdefault              " For :substitute, use the /g flag by default
+
+" Don't save global options. These should be set in vimrc
+" Idea from tpope/vim-sensible
+set sessionoptions-=options   
 
 " ----------------------------------------------------------------------------
 " Autocmds {{{1
